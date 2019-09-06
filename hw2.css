@@ -1,0 +1,32 @@
+@charset "UTF-8";
+/* CSS Document */
+
+bookCatalog {
+	background: #D8D8D8;
+	width: 75%;
+	margin: auto;
+}
+book{
+	display: block;
+	padding: 25px;
+}
+book:nth-of-type(odd) {
+	background-color: #B2DBFF;
+}
+title {
+	font-weight: 800;
+	font-size: 2.3em;
+	color: #BC0003;
+	display: block;
+	font-variant: small-caps;
+}
+author {
+	display: block;
+	font-size: 1.6em;
+	font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, "sans-serif";
+}
+publisher {
+	display: block;
+	font-size: 1em;
+	font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, "sans-serif";
+}
