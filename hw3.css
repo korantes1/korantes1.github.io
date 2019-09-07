@@ -13,12 +13,7 @@ h1 {
 table {
     width: 75%;
     margin: auto;
-	border: #FF0004 thin;
 }
-td {
+.table {
 	border: #FF0004 thin;
-}
-
-tr td:last-child {
-	text-align: right;
 }
