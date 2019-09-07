@@ -5,14 +5,15 @@ body {
 h1 {
 	font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, "sans-serif";
     font: 500;
-    margin: auto
+	display: block;
+    margin: auto;
 }
 
 table {
     width: 75%;
-    margin: auto
+    margin: auto;
 }
 
-Account_Total {
+td:last-child {
 	text-align: right;
 }
