@@ -26,7 +26,10 @@ tr td {
 	border: 1px solid #E4BAD5;
 }
 
-tr td:nth-child(2+5+7)
+tr td:nth-child(2+5+7){
+	font-weight: 600;
+	color: red;	
+}
 
 tr td:last-child {
 	text-align: right;
