@@ -21,6 +21,10 @@ th {
     font: 300;
 	font-size: 1.2em;
 }
+td {
+	border: 1px solid #E4BAD5;
+	
+}
 .table {
-	border: #FF0004 thin;
+	border: 1px solid #FF0004;
 }
