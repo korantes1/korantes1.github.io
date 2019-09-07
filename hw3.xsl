@@ -4,7 +4,7 @@
   <html lang="en">
     <head>
         <title>Assigment 3: XSLT</title>
-        <link rel="stylesheet" type="text/css" href="hw3.css">
+        <link rel="stylesheet" type="text/css" href="hw3.css"></link>
     </head>
   <body>
   <h1>List of Clients</h1>
