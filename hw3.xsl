@@ -3,13 +3,13 @@
 <xsl:template match="/">
   <html lang="en">
     <head>
-        <title>Assigment 3: XSLT</title>
+        <title>HW3 - XSLT</title>
         <link rel="stylesheet" type="text/css" href="hw3.css"></link>
     </head>
   <body>
   <h1>List of Clients</h1>
 <!-- Data Container-->
-    <table border="1">
+    <table>
       <tr>
         <th>Name</th>
         <th>Phone</th>
@@ -17,7 +17,7 @@
         <th>Account Total</th>
       </tr>
       <xsl:for-each select="Accounts/Client">
-      <tr>
+      <tr class="table">
         <td><xsl:value-of select="Name"/></td>
         <td><xsl:value-of select="Phone"/></td>
 		<td><xsl:value-of select="E-mail"/></td>
