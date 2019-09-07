@@ -21,10 +21,8 @@ th {
     font: 300;
 	font-size: 1.2em;
 }
-td {
+tr td {
 	border: 1px solid #E4BAD5;
 	
 }
-.table {
-	border: 1px solid #FF0004;
-}
+
