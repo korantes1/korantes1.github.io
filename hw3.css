@@ -1,5 +1,5 @@
 body {
-    background-color: gray; 
+    background-color: #F1F1F1; 
 }
 
 h1 {
@@ -7,11 +7,16 @@ h1 {
     font: 500;
 	display: block;
     margin: auto;
+	text-align: center;
 }
 
 table {
     width: 75%;
     margin: auto;
+	border: #FF0004 thin;
+}
+td {
+	border: #FF0004 thin;
 }
 
 tr:last-child {
