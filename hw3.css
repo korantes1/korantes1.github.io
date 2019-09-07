@@ -19,6 +19,6 @@ td {
 	border: #FF0004 thin;
 }
 
-tr:last-child {
+td:last-child {
 	text-align: right;
 }
