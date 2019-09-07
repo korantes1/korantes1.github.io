@@ -9,7 +9,7 @@
   <body>
   <h1>List of Clients</h1>
 <!-- Data Container-->
-    <table class="table">
+    <table>
       <tr>
         <th>Name</th>
         <th>Phone</th>
