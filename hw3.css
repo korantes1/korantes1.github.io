@@ -8,11 +8,18 @@ h1 {
 	display: block;
     margin: auto;
 	text-align: center;
+	padding: 50px;
 }
 
 table {
     width: 75%;
     margin: auto;
+}
+th {
+	border: none;
+	font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, "sans-serif";
+    font: 300;
+	font-size: 1.2em;
 }
 .table {
 	border: #FF0004 thin;

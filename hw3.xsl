@@ -9,7 +9,7 @@
   <body>
   <h1>List of Clients</h1>
 <!-- Data Container-->
-    <table>
+    <table class="table">
       <tr>
         <th>Name</th>
         <th>Phone</th>
@@ -17,7 +17,7 @@
         <th>Account Total</th>
       </tr>
       <xsl:for-each select="Accounts/Client">
-      <tr class="table">
+      <tr>
         <td><xsl:value-of select="Name"/></td>
         <td><xsl:value-of select="Phone"/></td>
 		<td><xsl:value-of select="E-mail"/></td>
