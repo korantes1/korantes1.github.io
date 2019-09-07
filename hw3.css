@@ -26,10 +26,6 @@ tr td {
 	border: 1px solid #E4BAD5;
 }
 
-tr td:nth-child(3n+2){
-	font-weight: 600;
-	color: red;	
-}
 
 tr td:last-child {
 	text-align: right;
