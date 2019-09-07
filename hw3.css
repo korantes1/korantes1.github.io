@@ -24,6 +24,10 @@ th {
 }
 tr td {
 	border: 1px solid #E4BAD5;
-	
 }
 
+tr td:last-child {
+	text-align: right;
+	color: red;
+	
+}
