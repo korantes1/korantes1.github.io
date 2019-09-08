@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>CNIT-133M HW1A</title>
+        <meta name="description" content="Homework 1">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="normalize.min.css">
+        <link rel="stylesheet" href="133mmain.css">
+		<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    </head>
+    <body>
+		<div class="content">
+			<h1 id="title">Mobile Web w&#47;HTML, CSS &#38; JS</h1>
+			<div class="box">
+				<div class="profile">
+					<img alt="avatar" src="me.jpg">
+					<p>My name is Kevin Orantes. <br>I'm originally from Guatemala, I have been in The Bay for almost 10 years now. I'm a Product Designer and Illustrator&#40;When I have time&#41; working and studying in SF. <br> Camping is my favorite thing in the world.</p>
+					<p>I'm taking this class to further understand Web Mobile Development. I think it is gonna be a hell of a tool to have in my skill set professionally too.</p>
+				</div>
+			</div>
+			<div class="box">
+				<h2>Technologies for this class</h2>
+				<ul class="techs">
+					<li>HTML</li>
+					<li>CSS</li>
+					<li>JavaScript</li>
+				</ul>
+				<h2>Resources</h2>
+				<ul>
+					<li>
+						<a href="https://www.awwwards.com" target="new">AWWWARDS</a>
+						<p>Really cool website to check new designs, technologies, best practices and innovative design approaches.</p>
+					</li>
+					<li>
+						<a href="https://medium.com/topic/ux" target="new">MEDIUM: UX</a>
+						<p>Random general information about UX Design, I think developers and specially designers should try to check what others are working on around the network I like Medium in general for the amount of content techies share on life scenarios, current projects and solutions.</p>
+					</li>
+				</ul>
+			</div>
+			<button class="content" id="play">START ANIMATION</button>
+		</div> 
+		
+ 
+<script>
+	$(document).ready(function(){
+	$("#play").click(function(){
+  var h1 = $("h1");
+  h1.css({color:'#f37736'}).animate({fontSize:'2em'},"slow");
+  h1.animate({fontSize:'1.6em', color:'#FF4040'},200);
+  var img = $("img");
+  img.css({border:'0 solid #f37736'}).animate({ borderWidth:'8', borderColor:'#FF4040'},700);
+  img.css({border:'0 solid #FF4040'}).animate({ borderWidth:'8'},200);
+
+});
+});
+	
+</script>
+    </body>
+</html>
