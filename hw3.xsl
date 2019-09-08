@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
+<xsl:output method="html"/>
 <xsl:template match="/">
   <html lang="en">
     <head>
@@ -21,8 +22,19 @@
         <td><xsl:value-of select="Name"/></td>
         <td><xsl:value-of select="Phone"/></td>
 		<td><xsl:value-of select="E-mail"/></td>
-		<td>&#0036;<xsl:value-of select="Account_Total"/></td>
+		<td>&#0036;<xsl:value-of select="Account_Total"/></td>		 
       </tr>
+	
+		  <xsl:for-each select="Client/Account_Total">
+    <xsl:if test="Account_Total>80000">
+      <tr>
+        <td style="color:blue"><xsl:value-of select="Account_Total"/></td>        
+      </tr>
+    </xsl:if>
+    </xsl:for-each>
+		  
+		  
+		  
       </xsl:for-each>
     </table>
   </body>
