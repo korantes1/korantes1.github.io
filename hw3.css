@@ -30,3 +30,8 @@ tr td {
 tr td:last-child {
 	text-align: right;
 }
+
+.lessthan {
+	color: #DE0003;
+	font-weight: 700
+}
