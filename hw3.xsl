@@ -25,12 +25,20 @@
 		<td>&#0036;<xsl:value-of select="Account_Total"/></td>		 
       </tr>
 	
-		  <xsl:for-each select="Client/Account_Total">
-    <xsl:if test="Account_Total>80000">
-      <tr>
-        <td style="color:blue"><xsl:value-of select="Account_Total"/></td>        
-      </tr>
-    </xsl:if>
+<xsl:for-each select="Accounts/Client">
+    <tr>
+      <td><xsl:value-of select="Account_Total"/></td>
+      <xsl:choose>
+      <xsl:when test="Account_Total &#62; 80000">
+         <td bgcolor="#ff00ff">
+         <xsl:value-of select="Account_Total"/>
+         </td>
+      </xsl:when>
+      <xsl:otherwise>
+         <td><xsl:value-of select="Account_Total"/></td>
+      </xsl:otherwise>
+      </xsl:choose>
+    </tr>
     </xsl:for-each>
 		  
 		  
