@@ -46,7 +46,7 @@
  
 <script>
 	$(document).ready(function(){
-	$("#play").click(function(){
+	$("#play").on('click', function(){
   var h1 = $("h1");
   h1.css({color:'#f37736'}).animate({fontSize:'2em'},"slow");
   h1.animate({fontSize:'1.6em', color:'#FF4040'},200);
