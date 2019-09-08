@@ -32,6 +32,8 @@ tr td:last-child {
 }
 
 .lessthan {
+	font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, "sans-serif"; 
 	color: #DE0003;
-	font-weight: 700
+	font-weight: 700;
+	border: #DE0003;
 }
