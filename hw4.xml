@@ -52,6 +52,7 @@
 <Phone>(532) 555-8981</Phone>
 <E-mail>rolson@delisp.net</E-mail>
 <Account_Total>$25,000</Account_Total>
+<Years>9</Years>
 </Client>
 
 <Client ID="CS5771">
@@ -68,6 +69,7 @@
 <Phone>(533) 555-5434</Phone>
 <E-mail>Sbone@mail.com</E-mail>
 <Account_Total>$105,000</Account_Total>
+<Years>1</Years>
 </Client>
 
 <Client ID="CS5981">
