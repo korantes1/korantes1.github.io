@@ -13,7 +13,15 @@
   	<img src="financialstartup.jpg" alt="ABC Financial Startup"/>
 	<p>We are a very young financial manager company and we are proud of our clients.</p>
 	<p>We have started with 1 client a little bit more than 10 years ago and now we have <xsl:value-of select="count(Accounts/Client)"/> clients! </p>
-	<p>These are our clients:</p>
+	<p>These are our clients: 
+		<xsl:for-each select="Accounts/Client/Name">
+			<xsl:value-of select="."/>
+			<xsl:choose>
+				<xsl:when test="position()=last()">, and
+				</xsl:when>
+				<xsl:otherwise>,</xsl:otherwise>
+			</xsl:choose>
+		</xsl:for-each></p>
 	 <p>of our clients are with us for more than 7 years!</p>
   </body>
   </html>
