@@ -19,7 +19,7 @@
 			<xsl:choose>
 				<xsl:when test="position()=last()">.</xsl:when>
 				<xsl:when test="position()=last()-1">, and</xsl:when>
-				<xsl:otherwise> ,</xsl:otherwise>
+				<xsl:otherwise>,</xsl:otherwise>
 			</xsl:choose>
 		</xsl:for-each></p>
 	 <p>of our clients are with us for more than 7 years!</p>
