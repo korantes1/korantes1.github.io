@@ -22,7 +22,7 @@
 				<xsl:otherwise>, </xsl:otherwise>
 			</xsl:choose>
 		</xsl:for-each></p>
-	 <p>of our clients are with us for more than 7 years!</p>
+	 <p> <xsl:value-of select="count(Accounts/Client/years &lt; 7")/> of our clients are with us for more than 7 years!</p>
   </body>
   </html>
 </xsl:template>
