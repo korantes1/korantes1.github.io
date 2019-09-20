@@ -18,7 +18,7 @@
 			<xsl:value-of select="normalize-space(Name)"/>
 			<xsl:choose>
 				<xsl:when test="position()=last()">.</xsl:when>
-				<xsl:when test="position()=last()-1">, and</xsl:when>
+				<xsl:when test="position()=last()-1">, and </xsl:when>
 				<xsl:otherwise>, </xsl:otherwise>
 			</xsl:choose>
 		</xsl:for-each></p>
