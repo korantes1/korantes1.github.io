@@ -15,3 +15,8 @@ img {
     width: 75%;
     margin: auto;
 }
+
+.container {
+	margin: auto;
+	border: 1px solid #014B7C;
+}

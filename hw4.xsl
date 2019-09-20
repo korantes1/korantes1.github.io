@@ -11,18 +11,20 @@
   	<h1>ABC Financial Startup</h1>
 <!-- Data Container-->
   	<img src="financialstartup.jpg" alt="ABC Financial Startup"/>
-	<p>We are a very young financial manager company and we are proud of our clients&#46;</p>
-	<p>We have started with 1 client a little bit more than 10 years ago and now we have <xsl:value-of select="count(Accounts/Client)"/> clients&#33;</p>
-	<p>These are our clients&#58; 
-		<xsl:for-each select="Accounts/Client">
-			<xsl:value-of select="normalize-space(Name)"/>
-			<xsl:choose>
-				<xsl:when test="position()=last()">&#46;</xsl:when>
-				<xsl:when test="position()=last()-1">&#44; and </xsl:when>
-				<xsl:otherwise>&#44; </xsl:otherwise>
-			</xsl:choose>
-		</xsl:for-each></p>
-	 <p> <xsl:value-of select="count(//Years[. &gt; '7'])"/> of our clients are with us for more than 7 years&#33;</p>
+	<div class="container">
+		<p>We are a very young financial manager company and we are proud of our clients&#46;</p>
+		<p>We have started with 1 client a little bit more than 10 years ago and now we have <xsl:value-of select="count(Accounts/Client)"/> clients&#33;</p>
+		<p>These are our clients&#58; 
+			<xsl:for-each select="Accounts/Client">
+				<xsl:value-of select="normalize-space(Name)"/>
+				<xsl:choose>
+					<xsl:when test="position()=last()">&#46;</xsl:when>
+					<xsl:when test="position()=last()-1">&#44; and </xsl:when>
+					<xsl:otherwise>&#44; </xsl:otherwise>
+				</xsl:choose>
+			</xsl:for-each></p>
+		 <p> <xsl:value-of select="count(//Years[. &gt; '7'])"/> of our clients are with us for more than 7 years&#33;</p>
+	 </div> 	
   </body>
   </html>
 </xsl:template>
