@@ -20,4 +20,9 @@ img {
 .container {
 	margin: auto;
 	border: 1px solid #014B7C;
+	padding: 25px;
+}
+
+p {
+	font-size: 1em;
 }
