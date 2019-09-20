@@ -15,7 +15,7 @@
 	<p>We have started with 1 client a little bit more than 10 years ago and now we have <xsl:value-of select="count(Accounts/Client)"/> clients! </p>
 	<p>These are our clients: 
 		<xsl:for-each select="Accounts/Client">
-			<xsl:value-of select="substring-after(Name, ' ')"/>
+			<xsl:value-of select="normalize-space(Name)"/>
 			<xsl:choose>
 				<xsl:when test="position()=last()">.</xsl:when>
 				<xsl:when test="position()=last()-1">, and</xsl:when>
