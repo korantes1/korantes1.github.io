@@ -1,9 +1,8 @@
 <!ENTITY miu "Made in USA">
 
-
-<!ELEMENT products (prod)+>
-<!ELEMENT prod (details, quantity, unite_price, loc, color)>
-<!ATTLIST prod ProdID IDREFS #REQUIRED>
+<!ELEMENT products (prod+)>
+<!ELEMENT prod (details+, quantity, unit_price, loc, color*)>
+<!ATTLIST prod ProdID ID #REQUIRED>
 
 <!ELEMENT details (short_desc, long_desc)>
 <!ELEMENT short_desc (#PCDATA)>
@@ -11,4 +10,4 @@
 <!ELEMENT quantity (#PCDATA)>
 <!ELEMENT unit_price (#PCDATA)>
 <!ELEMENT loc (#PCDATA)>
-<!ELEMENT color (#PCDATA)*>
+<!ELEMENT color (#PCDATA)>
