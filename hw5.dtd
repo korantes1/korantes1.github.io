@@ -1,7 +1,7 @@
 <!ENTITY miu "Made in USA">
 
 
-<!ELEMENT products (prod)>
+<!ELEMENT products (prod+)>
 <!ELEMENT prod (details, quantity, unite_price, loc, color*)>
 <!ATTLIST prod ProdID IDREFS #REQUIRED>
 
