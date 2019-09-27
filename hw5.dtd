@@ -9,6 +9,6 @@
 <!ELEMENT short_desc (#PCDATA)>
 <!ELEMENT long_desc (#PCDATA)>
 <!ELEMENT quantity (#PCDATA)>
-<!ELEMENT unite_price (#PCDATA)>
+<!ELEMENT unit_price (#PCDATA)>
 <!ELEMENT loc (#PCDATA)>
 <!ELEMENT color (#PCDATA)>

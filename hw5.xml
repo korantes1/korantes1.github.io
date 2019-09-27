@@ -9,7 +9,7 @@
 </details>
 <quantity>20</quantity>
 <unit_price>3.50</unit_price>
-<loc>Made in USA</loc>
+<loc>&miu;</loc>
 </prod>
 
 <prod ProdID="P1234567">
@@ -20,7 +20,7 @@
 <quantity>30</quantity>
 <unit_price>5.50</unit_price>
 <color>White</color>
-<loc>Made in USA</loc>
+<loc>&miu;</loc>
 </prod>
 
 <prod ProdID="P3256788">
@@ -31,7 +31,7 @@
 <quantity>28</quantity>
 <unit_price>6.50</unit_price>
 <color>Red</color>
-<loc>Made in USA</loc>
+<loc>&miu;</loc>
 </prod>
 
 <prod ProdID="P0025443">
@@ -41,7 +41,7 @@
 </details>
 <quantity>15</quantity>
 <unit_price>2.65</unit_price>
-<loc>Made in USA</loc>
+<loc>&miu;</loc>
 </prod>
 
 </products>
