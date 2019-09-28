@@ -5,9 +5,9 @@
 <!ATTLIST prod ProdID ID #REQUIRED>
 
 <!ELEMENT details (short_desc | long_desc)>
-<!ELEMENT short_desc &p;>
-<!ELEMENT long_desc &p;>
-<!ELEMENT quantity &p;>
-<!ELEMENT unit_price &p;>
-<!ELEMENT loc &p;>
-<!ELEMENT color &p;>
+<!ELEMENT short_desc %p;>
+<!ELEMENT long_desc %p;>
+<!ELEMENT quantity %p;>
+<!ELEMENT unit_price %p;>
+<!ELEMENT loc %p;>
+<!ELEMENT color %p;>
