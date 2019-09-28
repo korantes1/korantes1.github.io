@@ -1,4 +1,4 @@
-<!ENTITY miu "Made in USA">
+<!ENTITY miu 'Made in USA'>
 
 <!ELEMENT products (prod+)>
 <!ELEMENT prod (details+, quantity, unit_price, color*, loc)>
