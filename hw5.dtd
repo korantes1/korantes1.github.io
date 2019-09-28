@@ -1,0 +1,13 @@
+<!ENTITY miu "Made in USA">
+
+<!ELEMENT products (prod+)>
+<!ELEMENT prod (details+, quantity, unit_price, color*, loc)>
+<!ATTLIST prod ProdID ID #REQUIRED>
+
+<!ELEMENT details (short_desc, long_desc)>
+<!ELEMENT short_desc (#PCDATA)>
+<!ELEMENT long_desc (#PCDATA)>
+<!ELEMENT quantity (#PCDATA)>
+<!ELEMENT unit_price (#PCDATA)>
+<!ELEMENT loc (#PCDATA)>
+<!ELEMENT color (#PCDATA)>
