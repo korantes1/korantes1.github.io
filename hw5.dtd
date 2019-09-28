@@ -1,4 +1,4 @@
-<!ENTITY % P "(#PCDATA)"
+<!ENTITY % P "(#PCDATA)">
 
 <!ELEMENT products (prod+)>
 <!ELEMENT prod (details+, quantity, unit_price, color*, loc)>
