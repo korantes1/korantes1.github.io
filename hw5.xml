@@ -1,4 +1,5 @@
 <?xml version="1.0" standalone="no"?>
+<?xml-stylesheet type="text/css" href="hw5.css"?>
 <!DOCTYPE products PUBLIC "-//korantes//DTD hw5 1.0//EN" "https://korantes1.github.io/hw5.dtd" [
 <!ENTITY miu "Made in USA">
 ]>
