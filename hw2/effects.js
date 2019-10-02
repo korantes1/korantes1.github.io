@@ -11,6 +11,7 @@ $('.menu-toggle').on('click', function() {
 
 $(window).on('resize',function(){location.reload();});
 
+
 function toggleTabs(evt, tabName) {
 	
 	if ($(window).width() < 480) {
