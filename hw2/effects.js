@@ -9,7 +9,30 @@ $('.menu-toggle').on('click', function() {
 
 });
 
-$(window).on('resize',function(){location.reload();});
+var context;
+var $window = $(window);
+
+// run this right away to set context
+if ($window.width() <= 768) {
+    context = 'small';
+} else if (768 < $window.width() < 970) {
+    context = 'medium';
+} else {
+    context = 'large';
+}
+
+// refresh the page only if you're crossing into a context
+// that isn't already set
+$(window).resize(function() {
+    if(($window.width() <= 768) && (context != 'small')) {
+        //refresh the page
+        location.reload();
+    } else if ((768 < $window.width()  < 970) && (context != 'medium')) {
+        location.reload();
+    } else if (context != 'large') {
+        location.reload();
+    }
+});
 
 
 function toggleTabs(evt, tabName) {
