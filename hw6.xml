@@ -1,7 +1,7 @@
 <?xml version="1.0" ?>
 
 <member xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-		xsi:noNamespaceSchemaLocation="hw6.xsd">
+		xsi:noNamespaceSchemaLocation="https://korantes1.github.io/hw6.xsd">
 <name>Jonathan Mark</name>
 <age>22</age>
 <job>Consultant</job>
