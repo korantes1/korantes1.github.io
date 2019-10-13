@@ -12,7 +12,7 @@
 						</xs:restriction>
 					</xs:simpleType>
 				</xs:element>
-				<xs:element name="age" minOccurs="0" default="21">
+				<xs:element name="age" default="21">
 					<xs:simpleType>
 						<xs:restriction base="xs:integer">
 							<xs:minInclusive value="21"/>
