@@ -1,8 +1,7 @@
-<?xml version="1.0" ?>
-<?xml-stylesheet type="text/css" href="hw5.css"?>
+﻿<?xml version="1.0" ?>
+<?xml-stylesheet type="text/css" href="hw6.css"?>
 
-<member xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-		xsi:noNamespaceSchemaLocation="https://korantes1.github.io/hw6.xsd">
+<member xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://korantes1.github.io/hw6.xsd">
 <name>Jonathan Mark</name>
 <age>21</age>
 <job>Consultant</job>
