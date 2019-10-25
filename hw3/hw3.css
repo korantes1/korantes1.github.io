@@ -8,6 +8,14 @@
 	text-align: center;
 }
 
+#map {
+        height: 85vh;
+		  width: 100%
+      }
+
 #pincontent {
 	color: #FF9E00;
+}
+#locationFound {
+	color: #C5093C;
 }
