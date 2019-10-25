@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>ABC Toys - Locations</title>
+	<meta name="description" content="Homework 3">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="hw3.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+	
+	 <style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+        height: 400px;
+		  width: 100%
+      }
+    </style>
+</head>
+
+<body>
+	<nav class="ui fixed fluid five item labeled icon tiny menu container">
+		<a class="item"  href="../hw3.html" target="_parent"><i class="home icon"></i>Home</a>
+	  	<a class="item" href="../hw3/contact.html" target="_parent"><i class="phone icon"></i>Contact Us</a>
+	  	<a class="item" href="../hw3/products.html" target="_parent"><i class="rocket icon"></i>Products</a>
+	  	<a class="item active violet" href="../hw3/locations.html" target="_parent"><i class="location arrow icon"></i>Location</a>
+		<a class="item" href="../hw3/extra.html" target="_parent"><i class="ellipsis horizontal icon"></i>Extra</a>
+	</nav>
+	
+	<div class="ui grid container">
+<div class="ui column form main_container">
+	
+	    <div id="map"></div>
+	<script>
+function initMap() {
+  var sf = {lat:37.770577, lng:-122.424734};
+  var map = new google.maps.Map(document.getElementById('map'), {
+    zoom: 8,
+    center: sf
+    
+  });
+
+  var contentString = '<div id="pincontent">'+
+      '<h1> ABC Toys</h1>'+
+      '</div>'+
+      '</div>';
+
+  var infowindow = new google.maps.InfoWindow({
+    content: contentString,
+    maxWidth: 200
+  });
+
+  var marker = new google.maps.Marker({
+    position: sf,
+    map: map,
+    title: 'SF (ABC Toys)',
+    draggable: true,
+    animation: google.maps.Animation.DROP
+  });
+  
+  function toggleBounce() {
+        if (marker.getAnimation() !== null) {
+          marker.setAnimation(null);
+        } else {
+          marker.setAnimation(google.maps.Animation.BOUNCE);
+        }
+        }
+        
+  marker.addListener('click', function() {
+    infowindow.open(map, marker);
+  });
+}			
+	</script>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDL5P283dnzR5eBDQ9lLSYVuHRSf3MOrcY&callback=initMap"
+    async defer></script>
+		</div>
+		</div>
+
+<script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+</body>
+</html>
