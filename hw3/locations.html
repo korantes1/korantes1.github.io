@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="hw3.css">
 </head>
 
-<body>
+<body onload="getLocation()">
 	<nav class="ui sticky five item labeled icon tiny menu container fluid">
 		<a class="item"  href="../hw3.html" target="_parent"><i class="home icon"></i>Home</a>
 	  	<a class="item" href="../hw3/contact.html" target="_parent"><i class="phone icon"></i>Contact Us</a>
@@ -20,9 +20,26 @@
 	
 	<div class="ui grid container" id="context">
 <div class="ui column main_container">
-	
+	<div class="ui icon raised segment inverted display">
+				<h3>Your location</h3>
+			</div>
+		<p class="ui red tag label" id="latlong"></p>
 	    <div id="map"></div>
 	<script>
+		var x = document.getElementById("latlong");
+		
+		function getLocation() {
+			if(navigator.geolocation) {
+				navigator.geolocation.getCurrentPosition(showPosition);
+			} else {
+				x.innerHTML = "Geolocation is not supported by this browser.";
+			}
+		}
+		function showPosition(position) {
+			x.innerHTML = "Latitude: " + position.coords.latitude + 
+				"<br>Longitude: " + position.coords.longitude;
+		}
+		
 var map, infoWindow;
 function initMap() {
   map = new google.maps.Map(document.getElementById('map'), {

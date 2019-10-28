@@ -26,7 +26,13 @@
 	margin-right: 10px;
 }
 
+#latlong {
+	margin-bottom: 16px;
+}
 
+.extrastyles p {
+	margin-top: 10px; 
+}
 
 
 /* SMARTPHONES LANDSCAPE */
