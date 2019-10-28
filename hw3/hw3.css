@@ -1,12 +1,11 @@
 @charset "UTF-8";
 /* CSS Document */
 
- .main_container {
-    margin-top: 3em;
-  }
+
 .display {
 	text-align: center;
 }
+
 
 #map {
         height: 85vh;
@@ -16,7 +15,24 @@
 #pincontent {
 	color: #FF9E00;
 }
-#locationFound {
-	color: #C5093C;
-	padding: 5px;
+
+
+.accordion .title .header h3 .info {
+	float: right;
+}
+
+#infopad {
+	margin-top: 10px;
+}
+
+
+
+
+/* SMARTPHONES LANDSCAPE */
+@media only screen and (min-width: 480px) {
+
+html {max-width: 481px !important;
+	margin: auto;
+}
+
 }
