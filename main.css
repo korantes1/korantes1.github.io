@@ -96,3 +96,23 @@ th a:hover {
     margin: auto;
     text-align: center;
 }
+.h8 {
+	padding-top: 20px;
+}
+.h8 p {
+	text-align: left;
+}
+
+.h8 a {
+	font-size: 1.4rem;
+	color: #00C794;
+	display: block;
+	width: 200px;
+	padding: 10px;
+	border-radius: 5px;
+	border: 2px solid #00C794;
+}
+.h8 a:hover {
+	color: #ffffff;
+	background-color: #00C794;
+}
