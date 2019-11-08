@@ -1,11 +1,19 @@
 xquery version "1.0";
 
-let $books := (doc("hw8.xml")/bookstore/book)
-return <table><tr><th>Title</th><th>Price</th></tr>
+
+<html>
+<body>
+
+<h1>Bookstore</h1>
+
+<ul>
 {
-   for $x in $books   
-   order by $x/price
-   return <tr><td>{data($x/title)}</td><td>{data($x/price)}</td></tr>
+for $x in doc("hw8.xml")/bookstore/book
+where $x/price<30
+order by $x/title
+return <li>{$x/title}</li>
 }
-</table>
-</results>
+</ul>
+
+</body>
+</html>
