@@ -1,48 +1,27 @@
+
 body {
-  background: no-repeat;
- background-size: cover;
-}body {
-  background: no-repeat;
- background-size: cover;
-}  background: no-repeat;
- background-size: cover;body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	background: center center fixed;
+background-repeat:no-repeat;
+	-webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+    background-size:cover;
+}
+
+body {
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-weight: 300;
-  margin: 8px;
 }
 
 h1 {
   text-transform: uppercase;
-  font-weight: 300;
+	font-size: 1.2rem;
+  font-weight: 700;
+	color: antiquewhite;
 }
 
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
+div {
+	background: rgba(0,0,0,0.62);
+	padding: 20px;
+	margin: auto;
 }
-
-main {
-  display: grid;
-  grid-gap: 30px;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-auto-rows: max-content;
-  grid-auto-flow: row dense;
-}
-
-.article h2 {
-  font-family: Georgia, 'Times New Roman', Times, serif;
-}
-
-.article a,
-.article a:visited {
-  text-decoration: none;
-  color: inherit;
-}
-
-.article img {
-  width: 100%;
-}
-select#backgrounds option[value="Background 1"]   { background-image:url("img/lightblue.jpg");   }
-select#backgrounds option[value="Background 2"] { background-image:url("img/lightgold.jpg"); }
