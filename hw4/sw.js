@@ -5,6 +5,6 @@ const staticAssets = [
   './app.js',
   './styles.css',
   './fallback.json',
-  './img/lightgold.jpg'
-  './img/lightblue.jpg'
+  './img/lightgold.jpg',
+  './img/lightblue.jpg',
 ];
