@@ -1,7 +1,9 @@
 const staticAssets = [
 	'./',
 	'/hw4/styles.css',
-	'/hw4/app.js'
+	'/hw4/app.js',
+	'../hw4/img/lightgold.jpg'
+	'../hw4/img/lightblue.jpg'
 ];
 
 self.addEventListener('install', async event => {
@@ -14,7 +16,7 @@ self.addEventListener('fetch', event => {
 	event.respondWith(cacheFirst(req))
 });
 
-asyn function cacheFirst(req) {
-	const cachedResponse = await caches.match(reg);
+async function cacheFirst(req) {
+	const cachedResponse = await caches.match(req);
 	return cachedResponse || fetch(req);
 }
