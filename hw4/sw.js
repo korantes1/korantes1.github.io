@@ -1,11 +1,11 @@
-const cacheName = 'news-v1';
-
+const cacheName = 'backgrounds';
 const staticAssets = [
   './',
   './app.js',
   './styles.css',
   './fallback.json',
-  './images/fetch-dog.jpg'
+  './img/lightgold.jpg',
+  './img/lightblue.jpg'
 ];
 
 self.addEventListener('install', async function () {

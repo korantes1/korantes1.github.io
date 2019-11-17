@@ -1,5 +1,5 @@
 const apiKey = '6f4fa5447bb24a2687edecc4c1df43b4';
-const defaultSource = 'images/lightgold.png';
+const defaultSource = 'the-washington-post';
 const sourceSelector = document.querySelector('#sources');
 const newsArticles = document.querySelector('main');
 
@@ -21,7 +21,7 @@ window.addEventListener('load', e => {
 window.addEventListener('online', () => updateNews(sourceSelector.value));
 
 async function updateNewsSources() {
-  const response = await File sourceimage = new File("images/lightgold.jpg");
+  const response = await fetch(`https://korantes1.github.io/hw4/img/lightblue.jpg`);
   const json = await response.json();
   sourceSelector.innerHTML =
     json.sources
@@ -31,7 +31,7 @@ async function updateNewsSources() {
 
 async function updateNews(source = defaultSource) {
   newsArticles.innerHTML = '';
-  const response = await File sourceimage = new File("images/lightgold.jpg");
+  const response = await fetch(`https://newsapi.org/v2/top-headlines?sources=${source}&sortBy=top&apiKey=${apiKey}`);
   const json = await response.json();
   newsArticles.innerHTML =
     json.articles.map(createArticle).join('\n');

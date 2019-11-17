@@ -2,37 +2,35 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <title>Alternative news</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="UTF-8">
+	<title>Alternative news</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="styles.css">
 	<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
 </head>
 
 <body>
-
 	<div>
 		<h1>PICK A BACKGROUND IMAGE</h1>
-<select id="backgrounds">
-  <option>Select a background</option>
-  <option value="https://korantes1.github.io/hw4/img/lightgold.jpg">Background 1</option>
-  <option value="https://korantes1.github.io/hw4/img/lightblue.jpg">Background 2</option>
-</select>
-		</div>
-	
-  <script>
-	  
-$(document).ready(function() {
-  var body = $(document.body);
-  $('#backgrounds').bind('change', function(event) {
-    var bg = $(this).val();
-    console.log(bg);
-    if (bg == null || typeof bg === 'undefined' || $.trim(bg) === '')
-      body.css('background-image', '');
-    else
-      body.css('background-image', "url('" + bg + "')");
-  });
-});
+		<select id="backgrounds">
+			  <option>Select a background</option>
+			  <option value="https://korantes1.github.io/hw4/img/lightgold.jpg">Background 1</option>
+			  <option value="https://korantes1.github.io/hw4/img/lightblue.jpg">Background 2</option>
+		</select>
+	</div>
+  
+	<script>  
+		$(document).ready(function() {
+		  var body = $(document.body);
+		  $('#backgrounds').bind('change', function(event) {
+			var bg = $(this).val();
+			console.log(bg);
+			if (bg == null || typeof bg === 'undefined' || $.trim(bg) === '')
+			  body.css('background-image', '');
+			else
+			  body.css('background-image', "url('" + bg + "')");
+		  });
+		});
 	  </script>
 </body>
 
