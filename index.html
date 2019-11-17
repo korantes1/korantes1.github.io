@@ -1,39 +1,67 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>CNIT-131A - Assignments</title>
+        <meta name="description" content="Homework 1">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="normalize.min.css">
+        <link rel="stylesheet" href="main.css">
+        <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+    </head>
+    <body>
+    <div class="content">
+        <h1>CNIT-131A - ASSIGNMENTS</h1>
+        <table class="table">
+            <tr>
+               <th><a href="hw2.xml" target="_self" >Homework 2</a></th>
+               <td>Understanding XML basic syntax. "Make your own tags and attributes" I think that is one of my favorite features on XML, after going through HTML/CSS it seems like by creating my own tags XML helps me simplify how I can structure the date input in the doc and makes styling with CSS even more granular.</td>
+             </tr>
+            <tr>
+               <th><a href="hw3.xml" target="_self" >Homework 3</a></th>
+               <td>Learning how to use XSLT to further format XML data. I utilized an external .css linked to my .xsl page to have more control of the formatting. Playing with &#34;Adding Conditional Choices&#34; made it simple to select the specific values I wanted to format with different .css styles too.</td>
+             </tr>
+            <tr>
+               <th><a href="hw4.xml" target="_self" >Homework 4</a></th>
+               <td>XPath helps to further format XML elements and return values resulting from the interaction of these elements by selecting nodes specified by their location and the set of processes that will apply to the XML element. I think as long as the XML Node Tree is solid it is pretty straight forward to locate these nodes and set their functions.<br>
+			   Also it helps to target specific nodes without making templates for elements that are gonna be used just once.<br>
+			   Formatting related XPath Functions like normalize&#45;space&#40; &#41;, which I used to remove the leading and trailing on the Client's Name strings, I wonder if it is a better option to keep formatting to .css.
+			   </td>
+             </tr>
+            <tr>
+               <th><a href="hw5.xml" target="_self" >Homework 5</a></th>
+               <td>DTD is a great tool to validate the data and logic behind my XML structure.<br>On my homework I'm combining an External .dtd to validate the data in my XML and an Internal to declare my ENTITY for "Made in USA", I also added a parameter within my .dtd as I think it is necessary to understand their differences.<br>
+				I did do the mistake of adding my ENTITY to the .dtd first, it took me a few validation attempts to notice it was in the wrong document.</td>
+             </tr>
+            <tr>
+               <th><a href="hw6.xml" target="_self" >Homework 6</a></th>
+               <td>XSD has a lot more advantages over DTD from what I could play with in this exercise, I think it can add more granular validation and logic to the elements and attributes in the XML file.<br> 
+				One of features I like the most is that we can define our own types or use the built-in types and that follows the XML syntax closer. It can get a bit lengthy once you start defining child elements and attributes but with Simple and Complex Types is also easier to group and create a hierarchy when define the elements on the XML.</td>
+             </tr>
+            <tr>
+               <th><a href="hw7final.xml" target="_self" >Homework 7</a></th>
+               <td>Namespaces are useful to defined elements that share the same name through multiple XML documents. Gives elements specific context within a larger structure that could share the same element's name on multiple contexts. I think it also adds a layer logic to the structure of your XML when verifying and adding namespaces to CSS, Schemas, and even on the Attribute level. </td>
+             </tr>
+            <tr>
+               <th><a href="hw8.html" target="_self" >Homework 8</a></th>
+               <td>Reviewing the differences between XSLT 2.0, XPath 2.0 and XSLT 1.0, XPath 1.0. And practicing with XQuery.</td>
+             </tr>
+            <tr>
+               <th><a href="" target="_self" >Homework 9</a></th>
+               <td>Description</td>
+             </tr>
+            <tr>
+               <th><a href="" target="_self" >Homework 10</a></th>
+               <td>Description</td>
+             </tr>
+            <tr>
+               <th><a href="" target="_self" >Homework 11</a></th>
+               <td>Description</td>
+             </tr>
 
-<head>
-	<meta charset="UTF-8">
-	<title>Backgrounds</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="styles.css">
-	<link rel="manifest" href="manifest.json">
-	<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
-</head>
+        </table>
+    </div>
 
-<body>
-	<div>
-		<h1>PICK A BACKGROUND IMAGE</h1>
-		<select id="backgrounds">
-			  <option>Select a background</option>
-			  <option value="https://korantes1.github.io/hw4/img/lightgold.jpg">Background 1</option>
-			  <option value="https://korantes1.github.io/hw4/img/lightblue.jpg">Background 2</option>
-		</select>
-	</div>
-   <script src="app.js"></script>
-	<script>  
-		$(document).ready(function() {
-		  var body = $(document.body);
-		  $('#backgrounds').bind('change', function(event) {
-			var bg = $(this).val();
-			console.log(bg);
-			if (bg == null || typeof bg === 'undefined' || $.trim(bg) === '')
-			  body.css('background-image', '');
-			else
-			  body.css('background-image', "url('" + bg + "')");
-		  });
-		});
-		
-	  </script>
-</body>
-
+        
+    </body>
 </html>
