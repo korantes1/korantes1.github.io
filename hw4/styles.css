@@ -1,4 +1,11 @@
 body {
+  background: no-repeat;
+ background-size: cover;
+}body {
+  background: no-repeat;
+ background-size: cover;
+}  background: no-repeat;
+ background-size: cover;body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-weight: 300;
   margin: 8px;
@@ -37,3 +44,5 @@ main {
 .article img {
   width: 100%;
 }
+select#backgrounds option[value="Background 1"]   { background-image:url("img/lightblue.jpg");   }
+select#backgrounds option[value="Background 2"] { background-image:url("img/lightgold.jpg"); }
