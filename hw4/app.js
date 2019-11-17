@@ -1,7 +1,4 @@
-const apiKey = '6f4fa5447bb24a2687edecc4c1df43b4';
-const defaultSource = 'the-washington-post';
-const sourceSelector = document.querySelector('#sources');
-const newsArticles = document.querySelector('main');
+const sourceSelector = document.querySelector('#backgrounds');
 
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', () =>
