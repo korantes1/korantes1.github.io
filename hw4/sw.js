@@ -2,7 +2,7 @@ const staticAssets = [
 	'./',
 	'./styles.css',
 	'./app.js',
-	'./lightgold.jpg'
+	'./lightgold.jpg',
 	'./lightblue.jpg'
 ];
 
