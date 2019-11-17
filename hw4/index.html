@@ -5,34 +5,30 @@
   <meta charset="UTF-8">
   <title>Alternative news</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <link rel="stylesheet" href="styles.css">
-  <link rel="manifest" href="manifest.json">
-  <meta name="theme-color" content="#ffffff" />
 </head>
 
 <body>
   <header>
     <h1>Alternative news</h1>
 	</header>
-    <select id="backgrounds">
+	
+<select id="backgrounds">
     <option>Select a background</option>
-    <option value="url('https://korantes1.github.io/hw4/img/lightblue.jpg')">Background Image 1</option>
-    <option value="url('https://korantes1.github.io/hw4/img/lightgold.jpg')">Background Image 2</option>
-    <option value="none #000">Black</option>
-    <option value="none red">Red</option>
+    <option value="https://korantes1.github.io/hw4/img/lightgold.jpg">Background 1</option>
+    <option value="https://korantes1.github.io/hw4/img/lightblue.jpg">Background 2</option>    
 </select>
+	
   <script>
 	  
-	  $(document).ready(function()
+$(document).ready(function()
 {
     var body = $(document.body);
     $('#backgrounds').bind('change', function(event){
         var bg = $(this).val();
         if(bg == null || typeof bg === 'undefined' || $.trim(bg) === '')
-            body.css('background', 'none transparent');
+            body.css('background-image', '');
         else
-            body.css('background', bg);
+            body.css('background-image', "url('" + bg + "')");
     });
 });
 	  </script>
