@@ -1,0 +1,171 @@
+@charset "UTF-8";
+/* CSS Document */
+body {
+	padding-top: 80px;
+}
+
+#jumboimg {
+	background-image: url("img/bgjumbo1.webp");
+	margin-bottom: 30px;
+	background-size: cover;
+}
+#jumboimg h5 {
+	color: black;
+	padding: 10px 20px;
+	background-color: #ffffff;
+	width: 300px;
+	margin: auto;
+	margin-bottom: 16px;
+	font-size: 1.1rem;
+	font-weight: 300;
+}
+#jumboimg p {
+	color: black;
+	padding: 10px 20px;
+	background-color: #ffffff;
+	max-width: 700px;
+	margin: auto;
+	font-size: 0.9rem;
+	font-weight: 100;
+}
+
+.carousel-control-prev-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='000000' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
+}
+
+.carousel-control-next-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='000000' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
+}
+.breadcrumb {
+	background-color: #fff;
+}
+.breadcrumb-item  {
+	padding: 8px 16px;
+	font-size: 1.3rem;
+	font-weight: 300
+}
+
+.breadcrumb-item.active  {
+	color: #000;
+}
+
+.breadcrumb-item:first-child {
+	padding: 8px 26px;
+	background-color: #308AD9;
+}
+
+.breadcrumb-item:first-child:hover {
+	box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2), 0 8px 10px 0 rgba(0, 0, 0, 0.19);
+}
+.breadcrumb-item:first-child a {
+	color: #fff;
+	font-weight: 500;
+	font-size: 1rem;
+}
+.container-fluid {
+	max-width: 1200px;
+	clear: both;
+}
+.overview {
+	float: left;
+}
+.btn {
+	margin-top: 12px;
+}
+
+table {
+	float: right;
+	max-width: 400px;
+}
+td {
+	font-size: 0.8rem;
+	font-weight: 100;
+}
+
+th {
+	font-size: 0.8rem;
+	font-weight: 600;
+}
+
+.sectionheader {
+	width: 100%;
+	text-align: center;
+	font-weight: 700;
+	padding: 16px 16px;
+}
+ol {
+	max-width: 600px;
+	margin: 0;
+	float: left;
+}
+ol p {
+	font-size: 0.9rem;
+	margin: 0;
+}
+li p {
+	margin: 0;
+	font-size: 0.9rem;
+}
+
+#imginteg {
+	float: right;
+	width: 800px;
+	padding-bottom: 20px;
+}
+
+#imgapps {
+	float: right;
+	width: 500px;
+	padding-bottom: 20px;
+}
+#imgpersonas {
+	float: right;
+	width: 500px;
+	padding-bottom: 20px;
+}
+
+legend {
+	font-size: 1rem;
+	font-weight: 700;
+}
+
+.card-header object img {
+	height: 50px;
+	display: block;
+	float: right;
+}
+.card-header {
+	font-size: 1rem;
+	font-weight: 500;
+}
+.card-text {
+	font-size: 0.8rem;
+	margin: 0;
+}
+
+.wire1 {
+	width: 100%;
+}
+.wire2 {
+	width: 60%;
+	float: right;
+	padding-bottom: 16px;
+}
+
+footer {
+margin-top: 100px;
+	background-color: #002C52;
+	color: #fff;
+}
+
+footer a {
+	color: #fff;
+}
+
+
+ 
+
+
+
+
+

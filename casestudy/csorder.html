@@ -1,0 +1,350 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Case Studies</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="normilize.css">
+	<link rel="stylesheet" type="text/css" href="normalize.min.css">
+	<link rel="stylesheet" type="text/css" href="main.css">
+</head>
+<body>
+
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="index.html">CASE STUDY</a></li>
+    <li class="breadcrumb-item active" aria-current="page">ORDER-AHEAD FRAMEWORK</li>
+  </ol>
+	
+</nav>
+<div class="container-fluid">
+	<div class="w-50 overview">
+		<h3>Product Overview:</h3>
+		<p>Cardfree’s Order-Ahead system provides mobile and web ordering to SMB and large sized merchants. The unique demands of mobile ordering are met by the system which combines an existing, successful, production ordering code base with ground-up mobile-specific functionality, all encompassed within and making use of Cardfree’s integrated mobile commerce platform. Via the order ahead system, consumers may access a mobile/web menu, add items to their order, apply modifiers, choose a pick up location, pay for the order and finally check-in at the desired location to pick up their order.</p>
+		<button type="button" class="btn btn-outline-primary" style="margin-bottom: 10px;"><a href="csweborder.html" style="color:inherit;">See web app  <i class="fas fa-hiking"></i></a></button>
+	</div>
+<table class="table table-dark w-50">
+  <tbody>
+    <tr>
+      <th scope="row">ROLE</th>
+      <td>UX, UI DESIGNER</td>
+    </tr>
+    <tr>
+      <th scope="row">TOOLS</th>
+      <td>SKETCH, INVISION, HTML/CSS PROTOTYPING, ABSTRACT</td>
+    </tr>
+    <tr>
+      <th scope="row">TEAM</th>
+      <td>MYSELF, PROJECT MANAGER, ENGINEERING TEAM, EXECUTIVE TEAM</td>
+    </tr>
+	<tr>
+	  <th scope="row">TARGET PLATFORMS</th>
+      <td>MOBILE (IOS,AOS), WEB</td>
+    </tr>
+  </tbody>
+</table>
+	
+</div>
+<div class="container-fluid">
+<hr>
+	<h6 class="sectionheader">UNDERSTANDING THE OVERALL INTEGRATION: APP, PLATFORM API AND MERCHANT POS</h6>
+	<ol>
+		<li><p>A user with native mobile app or using the web app opens Order-Ahead services.</p></li>
+		<li><p>App asks for access to user location.</p></li>
+		<li><p>App checks user's location vs store address. User selects a store from list.</p></li>
+		<li><p>App access the store specific menu.</p></li>
+		<li><p>User is able to start an order, select pickup options or order type. The use is able to edit items from the order.</p></li>
+		<li><p>User is able to pay with credit card or store value cards.</p></li>
+		<li><p>Wait staff checks order, preps.</p></li>
+		<li><p>POS informs App order status e.g In Progress, Ready to Pick Up.</p></li>
+		<li><p>Users checks order status on device.</p></li>
+		<li><p>User picks up order at store.</p></li>
+	</ol>
+	<object>
+		<img id="imginteg" alt="integrationflow" src="img/integrationflow.svg"/>
+	</object>
+</div>
+	
+<div class="container-fluid">
+<hr>
+	<h6 class="sectionheader">ORDER-AHEAD FEATURE RESEARCH</h6>
+		<p>To begin my research on Order-Ahead in the mobile and web environments I started by looking at a few competitors with similar objectives, integrations and requierments.
+Through extensive testing and research I outlined the core features and fundamental principles these apps bring to the Order-Ahead ecosystem.</p>
+	<p>Screenshots taken for demostration purposes only, from left to right: Chick-fil-A, Panera Bread, Domino’s, Starbucks, Caviar, Postmates, DoorDash, Grubhub.</p>
+	<ol>
+		<legend>Notes from research:</legend>
+		<p>While the approaches in UI and Visual Design vary from merchant to merchant, the key and core features and UX are universal in the Order-Ahead ecosystem.<br>
+Some key findings:</p>
+		<li><p>Outlined user flows with clear step by step interactions. e.g. Select a store from stores available around you to start your order, then start an order for that store.</p></li>
+		<li><p>Present to the user only the information needed to finalize the task at hand. e.g. Pick Up options: Pick one of Pick Up, Delivery, Order at Table.</p></li>
+		<li><p>Maximized screen real-estate displaying menu categories in parent level and items in children level within groups, grids, and independent of product photography. Display key product information, e.g. name, modifiers, price.</p></li>
+		<li><p>Utilize item independent modules to present the user modifiers and available edits to the item that require user’s input.</p></li>
+		<li><p>Clear checkout information with order details, pick up options, totals and the ability to add more items to cart or change pick up options are key.</p></li>
+		<li><p>Payment management with in its own module helps users not make mistakes in the payment process and keeps details the task for better UX.</p></li>
+		<li><p>Post ordering the user should be able to easily reorder or favorite a past order.</p></li>
+	</ol>
+		<img id="imgapps" alt="mobile apps" src="img/imgapps.webp"/>
+</div>
+	
+<div class="container-fluid">
+<hr>
+	<h6 class="sectionheader">PERSONAS: WHO MAKES THE MOST OUT OF ORDER-AHEAD?</h6>
+		<p>The base user for Order-Ahead is a broad rage of personas defined by demographic, location, economics, profession, life sircustances to name a few. Some statistics point out that:</p>
+	<ol>
+		<p>While the approaches in UI and Visual Design vary from merchant to merchant, the key and core features and UX are universal in the Order-Ahead ecosystem.<br>
+Some key findings:</p>
+		<li><p>60 percent of U.S. consumers order delivery or takeout once a week.</p></li>
+		<li><p>31 percent say they use these third-party delivery services at least twice a week.</p></li>
+		<li><p>34 percent of consumers spend at least $50 per order when ordering food online.</p></li>
+		<li><p>20 percent of consumers say they spend more on off-premise orders compared to a regular dine-in experience.</p></li>
+		<li><p>Digital ordering and delivery has grown 300 percent faster than dine-in traffic since 2014.</p></li>
+		<li><p>70 percent of consumers say they’d rather order directly from a restaurant, preferring that their money goes straight to the restaurant and not a third party.</p></li>
+		<li><p>57 percent of millennials say that they have restaurant food delivered so they can watch movies and TV shows at home.</p></li>
+		<li><p>59 percent of restaurant orders from millennials are takeout or delivery.</p></li>
+		<legend>see article “Restaurant Online Ordering Statistics” by Upserver: Restaurant Insider.</legend>
+		<p>To understant who are we designing for, we defined 2 personas in a high-level and standard set of needs:</p>
+	</ol>
+		<img id="imgpersonas" alt="personas" src="img/imgpersonas.webp"/>
+</div>
+	
+<div class="container-fluid">
+<hr>
+	<h6 class="sectionheader">MAPPING AND IDEATION FOR ORDER-AHEAD FLOW</h6>
+	<div class="card-columns">
+ 
+<div class="card border-info mb-6" style="max-width: 25rem;">
+  <div class="card-header">
+	  <object>
+		  <img src="img/id1.svg" alt="graphic"/>
+	  </object>
+	 Open mobile/web app.</div>
+  <div class="card-body text-info">
+    <p class="card-text">1. User opens the  app (app, web view, etc.  Mobile/Web app calls our APIs / SDK).</p>
+  </div>
+</div>
+	<div class="card border-info mb-2" style="max-width: 25rem;">
+  <div class="card-header">
+	  <object>
+		  <img src="img/id2.svg" alt="graphic"/>
+	  </object>
+	 Locations services</div>
+  <div class="card-body text-info">
+    <p class="card-text">2. Find nearest mobile order enabled store.</p>
+	  <p class="card-text">3. Select the store.</p>
+	  <p class="card-text">4. On the store homepage, the user is presented with time information ("Today at 8:18 AM" for example, or "Busy, prep time is longer  than usual")<br>
+- User gets this information before they build an order.<br>
+- User gets pickup options.<br>
+- User gets order type options (Dine-In, delivery).</p>
+  </div>
+</div>
+	<div class="card border-info mb-2" style="max-width: 25rem;">
+  <div class="card-header">
+	  <object>
+		  <img src="img/id3.svg" alt="graphic"/>
+	  </object>
+	 Menu</div>
+  <div class="card-body text-info">
+    <p class="card-text">5. Browse a (master) menu or selects from their favorite order or order history.</p>
+	  <p class="card-text">6. Select a category (coffee).</p>
+	  <p class="card-text">7. View items in that category (espresso, latte, macchiato, etc.).</p>
+	  <p class="card-text">8. Select modifiers (double shot, almond milk, large, light sweetener, 2x sugar).</p>
+	  <p class="card-text">9. Add to cart.</p>
+  </div>
+</div>
+	<div class="card border-info mb-2" style="max-width: 25rem;">
+  <div class="card-header">
+	  <object>
+		  <img src="img/id4.svg" alt="graphic"/>
+	  </object>
+	 Order review</div>
+  <div class="card-body text-info">
+    <p class="card-text">11. Order is open and the user is able to review on Checkout.</p>
+	  <p class="card-text">12. View and edit pickup options or order type options.</p>
+	  <p class="card-text">13. View items on cart, the user is able to update items in cart.</p>
+	  <p class="card-text">14. The user is able to add more items to cart.</p>
+  </div>
+</div>
+	<div class="card border-info mb-2" style="max-width: 25rem;">
+  <div class="card-header">
+	  <object>
+		  <img src="img/id5.svg" alt="graphic"/>
+	  </object>
+	 Payment</div>
+  <div class="card-body text-info">
+    <p class="card-text">15. Select payment tender (stored value card, credit card, debit card, OS specific).</p>
+	  <p class="card-text">16. Purchase.</p>
+  </div>
+</div>
+		<div class="card border-info mb-2" style="max-width: 25rem;">
+  <div class="card-header">
+	  <object>
+		  <img src="img/id6.svg" alt="graphic"/>
+	  </object>
+	 Post order</div>
+  <div class="card-body text-info">
+    <p class="card-text">17. Immediately upon purchase, the user will receive informant in the UI (pop up modal, etc.) - Scheduled for pick up, date, time, instructions (go to pre order counter, etc.) and a dismiss button "OK" forcing the user to acknowledge the information.</p>
+	  <p class="card-text">18. Upon dismissing the order confirmation information the user is taken to a screen in the app that contains a map of the location, the estimated order time, the order status (order sent, preparing order, order ready for pick up) - note that the area of this screen that contains the order status is dynamic - it will update when the order status updates (from preparing order to order ready for pick up, etc.) .</p>
+  </div>
+</div>
+		<div class="card border-info mb-2" style="max-width: 25rem;">
+  <div class="card-header">
+	  <object>
+		  <img src="img/id1.svg" alt="graphic"/>
+	  </object>
+	 Returning user</div>
+  <div class="card-body text-info">
+    <p class="card-text">19. The user can use navigation to leave this page and either build another order or explore the menu - for example a back arrow taking the user to the store home page.</p>
+	  <p class="card-text">20. The user will always be able to get back to the order dynamic order confirmation page (map, status, etc.) - if they are on the store home page or exploring the menu, there will be visual indicator to take them back to the dynamic order confirmation page (for example a cell that states Order History, etc.).</p>
+  </div>
+</div>
+		<div class="card border-info mb-2" style="max-width: 25rem;">
+  <div class="card-header">
+	  <object>
+		  <img src="img/id7.svg" alt="graphic"/>
+	  </object>
+	 User at store</div>
+  <div class="card-body text-info">
+    <p class="card-text">21. User goes to store and pick up the item or at restaurant.</p>
+	  <p class="card-text">22. Additionally, the user gets a receipt via push/email (product / item ordered including modifiers and subtotal, tax and total).  There will be a prominent call to action on the receipt as well - Order Ready at 8:19 AM, Friday March 04 with instructions (please go to mobile order station, etc.).</p>
+  </div>
+</div>
+	</div>
+	</div>
+<div class="container-fluid">
+<hr>
+	<h6 class="sectionheader">WIREFRAMING</h6>
+	<p>When we started building the wireframe for Cardfree, the main client on the pipeline was Dunkin’. The current app is built on these wireframes for Order-Ahead, however, the project has expanded to support other clients.</p>
+	<legend>A user places an order with Order-Ahead mobile app.</legend>
+	<img class="wire1" alt="wires" src="img/oawire1.webp"/>
+	<legend>A user places an order with Order-Ahead web app.</legend>
+	<img class="wire1" alt="wires" src="img/webframes.webp"/>
+</div>
+<div class="container-fluid">
+<hr>
+	<h6 class="sectionheader">WIREFRAMING, STABLISHING UI COMPONENTS</h6>
+	<p style="float:left; width: 40%;">While braking down the wireframes for the Order-Ahead flow I started outlining UI components that would be standard for all the merchant across the experience.<br>
+I designed the UI based on components from Google’s Material Design and iOS Design Guidelines.</p>
+	<img class="wire2" alt="wires" src="img/oawire2.webp"/>
+</div>
+<div class="container-fluid">
+<hr>
+	<h6 class="sectionheader">MOBILE APP UI COMPONENTS</h6>
+	<p style="float:left; width: 40%;">With the overal Order-Ahead flow stablished I started the process of building the UI components.
+In the process I designed two sets for the menu UX.<br>
+The menu list support images and category title.<br>
+The merchant is able to display only the category title if images are not available.
+	UX differs as the menu list only displays the item grid if the user selects an item.<br>
+
+The grid displays all times for the on focus category. 
+The user is able to swipe through categories.<br>
+		The menu grid support images and category title.
+The merchant is able to display only the category title if images are not available or only the images if no title available.
+	</p>
+	<img class="wire2" alt="wires" src="img/ap1.webp"/>
+</div>
+<div class="container-fluid">
+<hr>
+	<h6 class="sectionheader">WEB APP UX/UI COMPONENTS</h6>
+	<p style="float:left; width: 30%;">As part of the Order-Ahead experience I designed the web app following the patters stablished in the mobile experience.</p>
+	<img class="wire2" alt="wires" src="img/webap1.webp"/>
+</div>
+<div class="container-fluid">
+<hr>
+	<h6 class="sectionheader">FRAMEWORK LIVE FOR MERCHANTS</h6>
+	<img style="width: 100px;" alt="wires" src="img/ddlogo.svg"/>
+	<p>For Dunkin’ I have redifine UI components to match with their global brand identity, the UX and core UI is based on the Order-Ahead framework.
+The framework is also used for Dunkin’s loyalty, payment, store value cards, locations, account manegment and more.</p>
+	<img class="wire1" alt="wires" src="img/ddapp.webp"/>
+	<legend>User interface styleguides.</legend>
+	<img class="wire1" alt="wires" src="img/ddstyles.webp"/>
+	<legend>In addition we built a catering version that uses the Order-Ahead web app framework.</legend>
+	<img class="wire1" alt="wires" src="img/ddcate.webp"/>
+	<button type="button" class="btn btn-outline-primary" style="margin-bottom: 10px;"><a href="csweborder.html" style="color:inherit;">See web apps  <i class="fas fa-hiking"></i></a></button>
+</div>
+	
+		<!-- Footer -->
+<footer class="page-footer font-small mdb-color pt-3">
+
+  <!-- Footer Links -->
+  <div class="container text-center text-md-left">
+
+    <!-- Footer links -->
+    <div class="row text-center text-md-left mt-3 pb-3">
+
+      <!-- Grid column -->
+      <div class="col-md-4 col-lg-4 col-xl-4 mx-auto mt-4">
+        <h6 class="text-uppercase mb-4 font-weight-bold">Kevin Orantes</h6>
+        <p>I'm a Product Designer,  Illustrator and Graphic Explorer.<br>
+I have 5+ years of experience in digital product design and traditional illustration, now exploring photography and Product Development.<br>
+I'm based in Oakland, CA and love the Bay Area "Summers".<br>
+
+CV available upon request..</p>
+      </div>
+      <!-- Grid column -->
+
+      <hr class="w-100 clearfix d-md-none">
+
+      <!-- Grid column -->
+      <div class="col-md-4 col-lg-4 col-xl-4 mx-auto mt-4">
+        <h6 class="text-uppercase mb-4 font-weight-bold">CASE STUDIES</h6>
+        <p>
+          <a href="csorder.html">Order-Ahead Mobile Framework</a>
+        </p>
+        <p>
+          <a href="cspayment.html">Payment Framework</a>
+        </p>
+        <p>
+          <a href="csloyalty.html">Loyalty Framework</a>
+        </p>
+        <p>
+          <a href="csweborder.html">Order-Ahead Web Framework</a>
+        </p>
+		  <p>
+          <a href="cstable.htm">Payment and Ordering at Table</a>
+        </p>
+      </div>
+
+      <!-- Grid column -->
+      <hr class="w-100 clearfix d-md-none">
+
+      <!-- Grid column -->
+      <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+        <h6 class="text-uppercase mb-4 font-weight-bold">Contact</h6>
+        <p>
+          <i class="fas fa-home mr-1"></i> Oakland, California</p>
+        <p>
+          <i class="fas fa-envelope mr-1"></i> kavinpan88@gmail.com</p>
+        <p>
+          <i class="fas fa-phone mr-1"></i> + 01 415 309 7252</p>
+		 <p>
+          <i class="fab fa-linkedin mr-2"></i><a href="https://www.linkedin.com/in/kevinorantes/">Linkedin</a></p>
+      </div>
+      <!-- Grid column -->
+
+    </div>
+    <!-- Footer links -->
+
+    <hr>
+
+    <!-- Grid row -->
+    <div class="row d-flex align-items-center">
+        <!--Copyright-->
+        <p class="text-center text-md-center">© 2019 Copyright:
+            <strong>Kevin Orantes</strong>
+        </p>
+
+    </div>
+    <!-- Grid row -->
+
+  </div>
+  <!-- Footer Links -->
+
+</footer>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+<script src="https://kit.fontawesome.com/c4f7d62c90.js" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>
