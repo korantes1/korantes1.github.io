@@ -1,0 +1,260 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Case Studies</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="normilize.css">
+	<link rel="stylesheet" type="text/css" href="normalize.min.css">
+	<link rel="stylesheet" type="text/css" href="main.css">
+</head>
+<body>
+
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="index.html">CASE STUDY</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Payment at Table</li>
+  </ol>
+	
+</nav>
+<div class="container-fluid">
+	<div class="w-50 overview">
+		<h3>Product Overview:</h3>
+		<p>Payment at Table is the fastest way to pay at restaurants, allowing guests to view and pay for their bill whenever is convenient for them - without ever downloading an app. Guests can simply use their mobile phones to tap the phones or scan a QR code on their table to quickly be able to view, pay, and close their bill.<br>
+		Payments are processed in seconds and allow guests to use their already set up Google or Apple Pay accounts, or quickly enter their credit card. Payments are passed directly to the restaurant's point of sale and the table and the table is closed, so no extra input is required from wait staff.</p>
+	</div>
+<table class="table table-dark w-50">
+  <tbody>
+    <tr>
+      <th scope="row">ROLE</th>
+      <td>UX, UI DESIGNER</td>
+    </tr>
+    <tr>
+      <th scope="row">TOOLS</th>
+      <td>SKETCH, INVISION, HTML/CSS PROTOTYPING, ABSTRACT</td>
+    </tr>
+    <tr>
+      <th scope="row">TEAM</th>
+      <td>MYSELF, PROJECT MANAGER, ENGINEERING TEAM, EXECUTIVE TEAM</td>
+    </tr>
+	<tr>
+	  <th scope="row">TARGET PLATFORMS</th>
+      <td>MOBILE (IOS,AOS), WEB</td>
+    </tr>
+  </tbody>
+</table>
+	
+</div>
+
+<div class="container-fluid">
+<hr>
+	<h6 class="sectionheader">PROBLEM STATEMENT</h6>
+		<p>Ordering food at a restaurant with a group of colleagues, friends or family can be complicated. Challenging and frustrating. This can in many cases spoil an otherwise enjoyable dining experience frustrating. It can be frustrating for guests to manually calculate what everyone owes and agree upon a group tip.</p>
+	<p>Challenging - It can be chalJengmg for large groups to have to wait till the end of tho meat to pay the entire bill.</p>
+	<p>Complicated - It can be complicated to calcu late the tax and bp on what each person m a dining party can owe.</p>
+	<ol>
+		<legend>SOLUTION</legend>
+		<p>Payment at the table addresses these issues by enabling groups of colleagues, friends or family to split a biill and pay for the items they ordered. This allows them the freedom to:</p>
+		<li><p>Pay when they want. No longer do you have to wait for the wart sta f to bnng you the final bill and wait for your credit card to be charged.</p></li>
+		<li><p>Only pay for the items you ordered. No longer do you have to pay for-someone's expensive ordet Only pay for the items you ordered and the tax on those items.</p></li>
+		<li><p>No more manual calculations • No more ti me consuming and frustrating calculations on the back of napkins on each other's bill.</p></li>
+		<li><p>Use of multiple payment methods • No longer are you ued to usmg a credit card to pay for your meal. Now available With Appte Pay and Google Pay.</p></li>
+		<li><p>Assumptions - All guests use their mobitc phone to split the bill using Apple Pay I Googto Pay J Credit card as payment method.</p></li>
+	</ol>
+		<ol>
+		<legend>USE CASES</legend>
+		<li><p>Single guest picks up the bill for a table.</p></li>
+		<li><p>Multiple guests spl􀅲 the bill for a table.</p></li>
+		<li><p>Guests make a payment and order Is closed.</p></li>
+	</ol>
+</div>
+	
+<div class="container-fluid">
+<hr>
+	<h6 class="sectionheader">WEB APP ARCHITECTURE</h6>
+	<p>The following diagram outlines the mobile architecture</p>
+	<ol style="margin-bottom: 25px;">
+		<li><p><strong>Get Bill</strong><br>
+When the user scans the QR code on the tabte tent or the bill using the mobile app, the OR contains the following key information:<br>
+Merchant ID<br>
+Store ID<br> 
+Table Number<br> 
+This information directed to the app server for processing.<br>
+The request is then directed to OMNIVORE for that particular location ID. The POS Is contacted and the order information for that table is collected. It is then returned to the device for display to the guest.</p></li>
+		
+		<li><p><strong>Check Offers and Rewards</strong><br>
+The offers engine will be checked to see if there are any applicable offer available for the items they have selected or that particular store. If offers are available, the discount will be made displayed on the bill.
+The Rewards engine will be checked to see if the user has any available rewards they can redeem.</p></li>
+		
+		<li><p><strong>Apply Offers and Reward Discount to Bill</strong><br>
+Apply any offers or rewards as discounts to the blll on the POS.</p></li>
+		
+		<li><p><strong>Got Payment Token</strong><br>
+When the guest selects to pay using Google Pay (Android) or Apple Pay (iPhone) on the mobile app, the action triggers a Payment Data Request that is sent from the mobile app to Google and Apple. A token is sent in the response by Google and Apple. This is then used in the next make payment call.</p></li>
+		
+		<li><p><strong>Make Payment</strong><br>
+Once the token has been returned by Google Pay or Apple Pay, it is then sent to the cloud as a payment request. This is then subsequently directed from the app server to the payment processor for capture and settlement with the merchant. Once the payment has been successfulty processed, the payment information is sent to OMNIVORE then directed to the POS. The response is sent back to the mobile device for the next step in the process. The merchant can then see all payments made through their POS, this amount will then be seen as a settlement amount into the Payment Processor Merchant account.</p></li>
+		
+		<li><p><strong>Close Table</strong><br>
+Once the response has been received that the payment has been successfully processed, the table can then be 
+closed. The request to close is sent to the POS via OMNIVORE. The success response is then sent back to the device.</p></li>
+		
+		<li><p><strong>Add Loyalty Points</strong><br>
+Loyalty points will be calculated based on dollar amount spent and frequency or visits and added to their accoont.</p></li>
+		
+		<li><p><strong>Send Push Notification</strong><br>
+Once the payment has been successfully processed and the table order closed, a success confirmation screen is presented to the guest. At this point a push notification is sent via our Push Notification service containing the following information:<br>
+Amount paid <br>
+Payment method used <br>
+Loyalty Points Earned <br>
+Reward earned (if applicable)<br>
+Thanking them for their visit</p></li>
+		
+		<li><p><strong> Get Payment and Loyalty History </strong><br>
+The guest can review their payment and loyalty history at any time:<br>
+Order number<br> 
+Table Number<br> 
+Date and time the order was closed<br>
+Wait staff name<br>
+Loyalty points earned<br>
+Order items<br>
+Discounts (Offers and Rewards)<br>
+Tip<br>
+Tax<br>
+Total<br>
+Payment method </p></li>	
+	</ol>
+	<img alt="mobile apps" src="img/patt1.webp" style="width: 40%; margin: 25px auto; display: block"/>
+</div>
+	
+<div class="container-fluid">
+<hr>
+	<h6 class="sectionheader">SOLUTION</h6>
+		<p style="width: 60%; margin: 0; display: inline-block;">Through learning about the problems we needed to solve and the users we were trying to 
+reach we build a design approached that would streamline the user expererience when paying at the restaurant.<br>
+Our main goal was to enable the user to see their bill and be able to pay on the spot through the browser by scanning the QR code on the table, knowing this we stripped down the UI to the most basic yet important elements for a user paying a bill.<br>
+	User information<br>
+	Total<br>
+	Tip<br>
+	Bill history<br>
+	Payment methods<br>
+	Receipt<br><br>
+	Having identified the first pan of the User Experience we then moved into one of the biggest needs and core of the feature "Split BIii" between the guests.
+	The solution I designed for this scenario is a real-time based feature that allows several user on your table to be added on the same bill, each user is able to see in real-time who has been updates on the payment process submitted by each of the user until the is closed in the POS.
+	</p>
+		<img alt="mobile apps" src="img/patt2.webp" style="width: 40%; margin:auto; float:right;"/>
+	<img alt="mobile apps" src="img/patt3.webp" style="width: 58%; padding-top:25px; float:left;"/>
+</div>
+	
+<div class="container-fluid">
+<hr>
+	<h6 class="sectionheader">WIREFRAMING</h6>
+	<legend>Initial concept</legend>
+	<img class="wire1" alt="wires" src="img/patt4.webp"/>
+	<hr>
+	<h6 class="sectionheader">USER EXPERIENCE AND USER INTERFACE</h6>
+	<legend>Single user experience.</legend>
+	<img class="wire1" alt="wires" src="img/pat-singleuser.webp"/>
+	<legend>Split, multiple users experience.</legend>
+	<img class="wire1" alt="wires" src="img/pat-split.webp"/>
+	<legend>Itemized, multiple users experience.</legend>
+	<img class="wire1" alt="wires" src="img/pat-item.webp"/>
+</div>
+
+<div class="container-fluid">
+<hr>
+	<h6 class="sectionheader">WEB APP UI COMPONENTS</h6>
+	<img class="wire1" alt="wires" src="img/pat-flows.webp"/>
+</div>
+<div class="container-fluid">
+<hr>
+	<h6 class="sectionheader">MERCHANTS USING PAYMENT AT TABLE</h6>
+	<img class="wire1" alt="wires" src="img/pat-clients.webp"/>
+</div>
+
+		<!-- Footer -->
+<footer class="page-footer font-small mdb-color pt-3">
+
+  <!-- Footer Links -->
+  <div class="container text-center text-md-left">
+
+    <!-- Footer links -->
+    <div class="row text-center text-md-left mt-3 pb-3">
+
+      <!-- Grid column -->
+      <div class="col-md-4 col-lg-4 col-xl-4 mx-auto mt-4">
+        <h6 class="text-uppercase mb-4 font-weight-bold">Kevin Orantes</h6>
+        <p>I'm a Product Designer,  Illustrator and Graphic Explorer.<br>
+I have 5+ years of experience in digital product design and traditional illustration, now exploring photography and Product Development.<br>
+I'm based in Oakland, CA and love the Bay Area "Summers".<br>
+
+CV available upon request..</p>
+      </div>
+      <!-- Grid column -->
+
+      <hr class="w-100 clearfix d-md-none">
+
+      <!-- Grid column -->
+      <div class="col-md-4 col-lg-4 col-xl-4 mx-auto mt-4">
+        <h6 class="text-uppercase mb-4 font-weight-bold">CASE STUDIES</h6>
+        <p>
+          <a href="csorder.html">Order-Ahead Mobile Framework</a>
+        </p>
+        <p>
+          <a href="cspayment.html">Payment Framework</a>
+        </p>
+        <p>
+          <a href="csloyalty.html">Loyalty Framework</a>
+        </p>
+        <p>
+          <a href="csweborder.html">Order-Ahead Web Framework</a>
+        </p>
+		  <p>
+          <a href="cstable.htm">Payment and Ordering at Table</a>
+        </p>
+      </div>
+
+      <!-- Grid column -->
+      <hr class="w-100 clearfix d-md-none">
+
+      <!-- Grid column -->
+      <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+        <h6 class="text-uppercase mb-4 font-weight-bold">Contact</h6>
+        <p>
+          <i class="fas fa-home mr-1"></i> Oakland, California</p>
+        <p>
+          <i class="fas fa-envelope mr-1"></i> kavinpan88@gmail.com</p>
+        <p>
+          <i class="fas fa-phone mr-1"></i> + 01 415 309 7252</p>
+		 <p>
+          <i class="fab fa-linkedin mr-2"></i><a href="https://www.linkedin.com/in/kevinorantes/">Linkedin</a></p>
+      </div>
+      <!-- Grid column -->
+
+    </div>
+    <!-- Footer links -->
+
+    <hr>
+
+    <!-- Grid row -->
+    <div class="row d-flex align-items-center">
+        <!--Copyright-->
+        <p class="text-center text-md-center">© 2019 Copyright:
+            <strong>Kevin Orantes</strong>
+        </p>
+
+    </div>
+    <!-- Grid row -->
+
+  </div>
+  <!-- Footer Links -->
+
+</footer>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+<script src="https://kit.fontawesome.com/c4f7d62c90.js" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>
