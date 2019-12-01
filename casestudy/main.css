@@ -1,8 +1,6 @@
 @charset "UTF-8";
 /* CSS Document */
-body {
-	padding-top: 80px;
-}
+
 
 #jumboimg {
 	background-image: url("img/bgjumbo1.webp");
@@ -41,7 +39,7 @@ body {
 }
 .breadcrumb-item  {
 	padding: 8px 16px;
-	font-size: 1.3rem;
+	font-size: 1rem;
 	font-weight: 300
 }
 
