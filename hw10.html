@@ -1,55 +1,38 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
-
-    <style>
-        table 
-        {
-            width: 100%;
-            font: 17px Calibri;
-        }
-        table, th, td 
-        {
-            border: solid 1px #DDD;
-            border-collapse: collapse;
-            padding: 2px 3px;
-            text-align: center;
-        }
-    </style>
+<meta charset="UTF-8">
+	<title>JSON</title>
+	<meta name="description" content="Homework 10">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
 </head>
 <body>
-    <p>Data extracted from a JSON and converted to an HTML table.</p>
-    <div id="showData"></div>
+ 
+	<div class="ui container">
+		<table class="ui celled table">
+  <thead>
+    <tr><th colspan="2" >Answer:</th>
+  </tr></thead>
+  <tbody>
+    <tr>
+      <td data-label="name">John</td>
+      <td data-label="profession">sales rep</td>
+    </tr>
+	<tr>
+      <td data-label="name">Maryenne</td>
+      <td data-label="profession">web developer</td>
+    </tr>
+
+  </tbody>
+</table>
+		
+	<a  href="https://korantes1.github.io/hw10.json"><button class="ui inverted primary button">JSON FILE</button></a>
+
+	</div>
+	
+<script src="https://code.jquery.com/jquery-2.2.0.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+
 </body>
-
-<script>
-    $(document).ready(function () {
-        $.getJSON("korantes1.github.io/hw10.json", function (data) {
-
-            // CREATE DYNAMIC TABLE.
-            var table = document.createElement("table");
-			table = JSON.parse(this.responseText);
-    txt +=
-"<table border='1'>"
-
-            // ADD JSON DATA TO THE TABLE AS ROWS.
-            for (var i = 0; i < arrItems.length; i++) {
-
-                tr = table.insertRow(-1);
-
-                for (var j = 0; j < col.length; j++) {
-                    var tabCell = '<tr><td>' + employees[0].firstName + '</td><td>' + employees[0].profession + '</td></tr>';
-                    tabCell.innerHTML = arrItems[i][col[j]];
-                }
-            }
-			txt += "</table>"  
-
-            // FINALLY ADD THE NEWLY CREATED TABLE WITH JSON DATA TO A CONTAINER.
-            var divContainer = document.getElementById("showData");
-            divContainer.innerHTML = "";
-            divContainer.appendChild(table);
-        });
-    });
-</script>
 </html>
