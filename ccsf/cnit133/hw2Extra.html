@@ -1,0 +1,151 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+        <meta charset="utf-8">
+        <title>CNIT-133 - Homework 2</title>
+        <meta name="description" content="Homework 1">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="normalize.min.css">
+        <link rel="stylesheet" href="main.css">
+		<link rel="stylesheet" href="hw2.css">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>			
+
+	function process()
+	 {
+		var val1, val2, val3, val4, val5, rate1, rate2, rate3, rate4, rate5, doll, doll1, ra1, ra2, ra3, ra4, ra5, vals;
+		doll = document.forms["myform"].elements["dollarAmount"].value;
+		 rate1 = document.forms["myform"].elements["rate1"].value;
+		 rate2 = document.forms["myform"].elements["rate2"].value;
+		 rate3 = document.forms["myform"].elements["rate3"].value;
+		 rate4 = document.forms["myform"].elements["rate4"].value;
+		 rate5 = document.forms["myform"].elements["rate5"].value;
+		doll1 = parseFloat(doll);
+		 ra1 = parseFloat(rate1);
+		 ra2 = parseFloat(rate2);
+		 ra3 = parseFloat(rate3);
+		 ra4 = parseFloat(rate4);
+		 ra5 = parseFloat(rate5);
+ 		 val1 = doll1 * ra1;
+		val2 = doll1 * ra2;
+		 val3 = doll1 * ra3;
+		 val4 = doll1 * ra4;
+		 val5 = doll1 * ra5;
+		 
+		 var validity = document.getElementsByName("dollarAmount");
+	 for (var entry = 0; entry < validity.length; entry++){
+    if ((validity[entry].value === "" ) || (isNaN(validity[entry].value))){
+      return  document.getElementById("message").innerHTML= ("Please enter Amount of U.S. Dollar!");
+    }
+		 
+    else {
+	return	document.getElementById("val1").innerHTML= ( val1.toFixed(2)),
+			document.getElementById("val2").innerHTML= ( val2.toFixed(2)),
+			document.getElementById("val3").innerHTML= ( val3.toFixed(2)),
+			document.getElementById("val4").innerHTML= ( val4.toFixed(2)),
+			document.getElementById("val5").innerHTML= ( val5.toFixed(2));
+	 }
+	}
+	 }
+	
+</script>
+</head>
+			<header>
+			<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="hw2.html">Back</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Part 3</li>
+  </ol>
+</nav>
+		</header>
+<body onload="document.forms['myform'].elements['doll'].focus()">
+	
+	<div class="container">
+		<ul class="nav nav-tabs" id="myTab" role="tablist" style=" margin: auto; margin-top: 100px;">
+  <li class="nav-item">
+    <a class="nav-link" id="part1-tab" data-toggle="tab" href="hw2Part1.html" role="tab" aria-controls="Part1" aria-selected="false">Part 1</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="part2-tab" data-toggle="tab" href="hw2Part2.html" role="tab" aria-controls="Part2" aria-selected="false">Part 2</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="part3-tab" data-toggle="tab" href="hw2Part3.html" role="tab" aria-controls="Part3" aria-selected="false">Part 3</a>
+  </li>
+	<li class="nav-item">
+    <a class="nav-link active" id="part4-tab" data-toggle="tab" href="hw2Extra.html" role="tab" aria-controls="Part3" aria-selected="true">Extra</a>
+  </li>
+</ul>
+	<div id="clickme" role="button" class="btn btn-outline-info">Click me to see instructions!</div>
+<div id="ins" class="card card-body">The foreign exchange rates in July 2019<br>Enter a dollar amount in the table below to see the corresponding foreign exhange values.</div>
+<form name="myform">
+<table class="table table-hover">
+	
+		<h1>Monetary Exhange Rates</h1>
+  <thead>
+    <tr>
+      <th scope="col">Currency</th>
+      <th scope="col">Rate</th>
+      <th scope="col" class="text-right">Value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">British Pound</th>
+      <td class="text-muted">
+		  <input class="form-text text-muted" type="text" name="rate1" value="1.30" disabled>
+		</td>
+      <td class="text-right" id="val1"></td>
+    </tr>
+    <tr>
+      <th scope="row">Canadian Dollar</th>
+      <td class="text-muted">
+		  <input class="form-text text-muted" type="text" name="rate2" value="1.31" disabled>
+	</td>
+      <td class="text-right" id="val2"></td>
+    </tr>
+	    <tr>
+			<th scope="row">Euro</th>
+      <td class="text-muted">
+		  <input class="form-text text-muted" type="text" name="rate3" value="0.89" disabled>
+			</td>
+      <td class="text-right" id="val3"></td>
+    </tr>
+	    <tr>
+	      <th scope="row">Japanese Yen</th>
+      <td class="text-muted">
+		  <input class="form-text text-muted" type="text" name="rate4" value="108.38" disabled>
+			</td>
+      <td class="text-right" id="val4"></td>
+    </tr>
+	  	    <tr>
+	      <th scope="row">Mexican Peso</th>
+      <td class="text-muted">
+		  <input class="form-text text-muted" type="text" name="rate5" value="19.18" disabled>
+				</td>
+      <td class="text-right" id="val5"></td>
+    </tr>
+    <tr>
+      <th scope="row" colspan="2" id="message">Enter Amount of U.S. Dollar</th>
+      <td class="text-right">
+		  
+		  <input class="form-control" type="number" name="dollarAmount" id="doll">
+		</td>
+    </tr>
+  </tbody>
+</table>
+	<button class="btn btn-primary" id="btn" type="button" onclick="process(); document.forms['myform'].elements['doll'].focus();" value="SUBMIT">SUBMIT</button>
+ </form>
+
+</div>
+
+<script> 
+$(document).ready(function(){
+  $("#clickme").click(function(){
+    $("#ins").slideToggle("slow");
+  });
+});
+</script>
+</body>
+</html>

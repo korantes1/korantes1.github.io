@@ -1,0 +1,134 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+        <meta charset="utf-8">
+        <title>CNIT-133 - Homework 2</title>
+        <meta name="description" content="Homework 1">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="normalize.min.css">
+        <link rel="stylesheet" href="main.css">
+		<link rel="stylesheet" href="hw2.css">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>			
+
+	function process()
+	 {
+		var number1, number2, number3, number4, number5, n1, n2, n3, n4, n5, nums;
+		number1 = document.forms["myform"].elements["num1"].value;
+		number2 = document.forms["myform"].elements["num2"].value;
+		number3 = document.forms["myform"].elements["num3"].value;
+		number4 = document.forms["myform"].elements["num4"].value;
+		number5 = document.forms["myform"].elements["num5"].value;
+		n1 = parseInt(number1);
+		n2 = parseInt(number2);
+		n3 = parseInt(number3);
+		n4 = parseInt(number4);
+		n5 = parseInt(number5);
+		nums = [n1,n2,n3,n4,n5];
+		 
+	var ar = nums;
+var zeroCount = 0,
+  posCount = 0,
+  negativeCount = 0;
+		 ar.forEach((num) => {
+  if (num === 0) {
+    zeroCount++
+  } else if (num < 0) {
+    negativeCount++
+  } else if (num > 0) {
+    posCount++
+  }
+});
+		 
+		 var validity = document.getElementsByTagName('input');
+	 for (var entry = 0; entry < validity.length; entry++){
+    if ((validity[entry].value === "" ) || (isNaN(validity[entry].value))){
+      return  document.getElementById("results").innerHTML= ("<p>Please enter a number!</p>");
+    }
+		 
+    else {
+	return	document.getElementById("results").innerHTML= ("The positive total " + posCount + "<br>The negative total " + negativeCount + "<br>The zero total " + zeroCount); 
+	 }
+	}
+	 }
+	function res()
+	{
+	document.getElementById("results").innerHTML = "";
+	document.myform.num1.focus();
+	}
+
+</script>
+</head>
+			<header>
+			<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="hw2.html">Back</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Part 3</li>
+  </ol>
+</nav>
+		</header>
+<body onload="document.forms['myform'].elements['num1'].focus()">
+	<div class="container">
+				<ul class="nav nav-tabs" id="myTab" role="tablist" style=" margin: auto; margin-top: 100px;">
+  <li class="nav-item">
+    <a class="nav-link" id="part1-tab" data-toggle="tab" href="hw2Part1.html" role="tab" aria-controls="Part1" aria-selected="false">Part 1</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="part2-tab" data-toggle="tab" href="hw2Part2.html" role="tab" aria-controls="Part2" aria-selected="false">Part 2</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link active" id="part3-tab" data-toggle="tab" href="hw2Part3.html" role="tab" aria-controls="Part3" aria-selected="true">Part 3</a>
+  </li>
+	<li class="nav-item">
+    <a class="nav-link " id="part4-tab" data-toggle="tab" href="hw2Extra.html" role="tab" aria-controls="Part3" aria-selected="false">Extra</a>
+  </li>
+</ul>
+		<h1>Part 3</h1>
+
+<h3>Please enter a number</h3>
+
+<form name="myform">
+<div class="form-group">
+<label for="num1">1st.</label>
+<input class="form-control" type="number" name="num1">
+</div>
+<div class="form-group">
+<label for="num2">2nd.</label>
+<input class="form-control" type="number" name="num2">
+</div>
+<div class="form-group">
+<label for="num3">3rd.</label>
+<input class="form-control" type="number" name="num3">
+	</div>
+	<div class="form-group">
+<label for="num4">4th.</label>
+<input class="form-control" type="number" name="num4">
+</div>
+<div class="form-group">
+<label for="num5">5th.</label>
+<input class="form-control" type="number" name="num5">
+	</div>
+<!-- display results in a div -->
+<div id="results"></div>
+	
+
+<br><br>
+<button class="btn btn-primary" id="btn" type="button" onclick="process(); document.forms['myform'].elements['num1'].focus();" value="SUBMIT">SUBMIT</button>
+	<button class="btn btn-primary" id="reset" type="reset" value="RESET" onclick="res()">RESET</button>
+		
+</form>
+	
+</div>
+
+
+<script>
+	$(document).ready(function(){
+$(document.getElementById("btn")).on('click', function(){
+	$(document.getElementById("results")).fadeIn("slow");
+});
+});
+	</script>
+</body>
+</html>
