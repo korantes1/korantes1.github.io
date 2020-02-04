@@ -44,7 +44,7 @@ var zeroCount = 0,
 		 
 		 var validity = document.getElementsByTagName('input');
 	 for (var entry = 0; entry < validity.length; entry++){
-    if ((validity[entry].value === "" ) || (isNaN(validity[entry].value))){
+    if ((validity[entry].value === "" ) || (isNaN(validity[entry].value)) || (validity[entry].value === isNaN)){
       return  document.getElementById("results").innerHTML= ("<p>Please enter a number!</p>");
     }
 		 
