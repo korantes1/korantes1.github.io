@@ -60,7 +60,7 @@
   </ol>
 </nav>
 		</header>
-<body onload="document.forms['myform'].elements['doll'].focus()">
+<body>
 	
 	<div class="container">
 		<ul class="nav nav-tabs" id="myTab" role="tablist" style=" margin: auto; margin-top: 100px;">
@@ -145,6 +145,14 @@ $(document).ready(function(){
   $("#clickme").click(function(){
     $("#ins").slideToggle("slow");
   });
+	
+ $("#doll").focus(function(){
+    $(this).css("background","#BFE880");
+  });	
+$("#doll").focusout(function(){
+    $(this).css("background","none");
+  });
+	
 });
 </script>
 </body>
