@@ -1,0 +1,223 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+        <meta charset="utf-8">
+        <title>CNIT-133 - Homework 3</title>
+        <meta name="description" content="Homework 3">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="normalize.min.css">
+        <link rel="stylesheet" href="main.css">
+		<link rel="stylesheet" href="hw3.css">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<link href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/ui-lightness/jquery-ui.css" rel="stylesheet"> 
+	
+<script>			
+
+	function process()
+	 {
+		var number1, number2, number3, number4, n1, n2, n3, n4, nums, item1, item2, item3, item4, totalAmmount, weeklyEarned;
+		number1 = document.forms["myform"].elements["num1"].value;
+		number2 = document.forms["myform"].elements["num2"].value;
+		number3 = document.forms["myform"].elements["num3"].value;
+		number4 = document.forms["myform"].elements["num4"].value;
+		n1 = parseInt(number1);
+		n2 = parseInt(number2);
+		n3 = parseInt(number3);
+		n4 = parseInt(number4);
+		item1 = n1 * 239.99;
+		item2 = n2 * 129.75;
+		item3 = n3 * 99.95;
+		item4 = n4 * 350.89;
+		totalAmmount = item1 + item2 + item3 + item4;
+		weeklyEarned = ((9 / 100) * totalAmmount + 200);
+		 
+		 var validity = document.forms.myform.getElementsByTagName('input');
+		 for (var entry = 0; entry < validity.length; entry++){
+			 if ((validity[entry].value === "" ) || (isNaN(validity[entry].value))){
+				return  document.getElementById("badResult").innerHTML= ("<p>Please enter a number!</p>");
+				 
+			 }
+			 else {
+				 return document.getElementById("item1Sold").innerHTML= (n1),
+				 document.getElementById("item1Total").innerHTML= ("&#36;" + item1.toFixed(2)),
+				document.getElementById("item2Sold").innerHTML= (n2),
+				 document.getElementById("item2Total").innerHTML= ("&#36;" + item2.toFixed(2)),
+				 document.getElementById("item3Sold").innerHTML= (n3),
+				 document.getElementById("item3Total").innerHTML= ("&#36;" + item3.toFixed(2)),
+				document.getElementById("item4Sold").innerHTML= (n4),
+				document.getElementById("item4Total").innerHTML= ("&#36;" + item4.toFixed(2)),
+				document.getElementById("totalAmmount").innerHTML= ("&#36;" + totalAmmount.toFixed(2)),
+				document.getElementById("weeklyEarned").innerHTML= ("&#36;" + weeklyEarned.toFixed(2));
+				 
+				 }
+		 }
+
+	 }
+	function res()
+	{
+		document.innerHTML = "",
+		document.getElementById("item1Sold").innerHTML= "",
+				 document.getElementById("item1Total").innerHTML= "",
+				document.getElementById("item2Sold").innerHTML= "",
+				 document.getElementById("item2Total").innerHTML= "",
+				 document.getElementById("item3Sold").innerHTML= "",
+				 document.getElementById("item3Total").innerHTML= "",
+				document.getElementById("item4Sold").innerHTML= "",
+				document.getElementById("item4Total").innerHTML= "",
+				document.getElementById("totalAmmount").innerHTML= "",
+				document.getElementById("weeklyEarned").innerHTML= "",
+		document.myform.num1.focus();
+	}
+
+</script>
+</head>
+			<header>
+			<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="hw3.html">Back</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Part 2</li>
+  </ol>
+</nav>
+		</header>
+<body onload="document.forms['userInfo'].elements['salesPerson'].focus()">
+	<div class="container">
+<ul class="nav nav-tabs" id="myTab" role="tablist" style=" margin: auto; margin-top: 100px;">
+  <li class="nav-item">
+    <a class="nav-link" id="part1-tab" data-toggle="tab" href="hw3Part1.html" role="tab" aria-controls="Part1" aria-selected="false">Part 1</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link active" id="part2-tab" data-toggle="tab" href="hw3Part2.html" role="tab" aria-controls="Part2" aria-selected="true">Part 2</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="part3-tab" data-toggle="tab" href="hw3Part3.html" role="tab" aria-controls="Part3" aria-selected="false">Part 3</a>
+  </li>
+</ul>
+	<h1>Part 2</h1>
+
+<h3>Weekly Earnings</h3>
+<form name="userInfo">
+<div class="form-group">
+<label for="salesPerson">Salesperson</label>
+<input id="div_tooltip" class="form-control" type="text" name="salesPerson" title="Please make sure that the salesperson's name is spelled correctly.">
+</div>
+</form>
+
+<form name="myform">
+<h5>Enter the quantity sold per item:</h5>
+<div class="form-group">
+<label for="num1">Item 1</label>
+<input id="in1" class="form-control" type="number" min="0" max="100" name="num1">
+</div>
+<div class="form-group">
+<label for="num2">Item 2</label>
+<input id="in2" class="form-control" type="number" min="0" max="100" name="num2">
+</div>
+<div class="form-group">
+<label for="num3">Item 3</label>
+<input id="in3" class="form-control" type="number" min="0" max="100" name="num3">
+	</div>
+<div class="form-group">
+<label for="num4">Item 4</label>
+<input id="in4" class="form-control" type="number" min="0" max="100" name="num4">
+	</div>
+<!-- display results in a div -->
+	<div id="resultsP2">
+	<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Item #</th>
+      <th scope="col">Price</th>
+      <th scope="col">Number Sold</th>
+      <th scope="col">Total</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>$239.99</td>
+      <td id="item1Sold"></td>
+	  <td id="item1Total"></td>
+    </tr>
+	<tr>
+      <th scope="row">2</th>
+      <td>$129.759</td>
+      <td id="item2Sold"></td>
+	  <td id="item2Total"></td>
+    </tr>
+	<tr>
+      <th scope="row">3</th>
+      <td>$99.95</td>
+      <td id="item3Sold"></td>
+	  <td id="item3Total"></td>
+    </tr>
+	<tr>
+	<th scope="row">4</th>
+      <td>$350.89</td>
+      <td id="item4Sold"></td>
+	  <td id="item4Total"></td>
+    </tr>
+	<tr>
+	<th scope="row" colspan="3" >Total Ammount</th>
+	  <td id="totalAmmount"></td>
+    </tr>
+	<tr>
+	<th scope="row" colspan="3">Total Weekly Earnings</th>
+	  <td id="weeklyEarned"></td>
+    </tr>
+  </tbody>
+</table>
+		<div id="badResult"></div>
+	</div>
+
+<br><br>
+<button class="btn btn-primary" id="btn" type="button" onclick="process(); document.forms['myform'].elements['num1'].focus();" value="SUBMIT" disabled="disabled">SUBMIT</button>
+	<button class="btn btn-primary" id="reset" type="reset" value="RESET" onclick="res()">RESET</button>
+		
+</form>
+
+	
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script> 
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script> 
+<script>
+	$(document).ready(function(){
+		$('input').keyup( function () {
+    //limit the value to between 0 and 100
+    var thisVal = parseInt($(this).val(), 10);
+    if (!isNaN(thisVal)) {
+        thisVal = Math.max(0, Math.min(100, thisVal));
+        $(this).val(thisVal);
+    }
+    
+});
+		    //enable submit button
+       $("#in1, #in2, #in3, #in4").keyup(function() {
+
+        var empty = false;
+        $("#in1, #in2, #in3, #in4").each(function() {
+            if ($(this).val().length == 0) {
+                empty = true;
+            }
+        });
+
+        if (empty) {
+            $('#btn').attr('disabled', 'disabled');
+        } else {
+            $('#btn').attr('disabled', false);
+        }
+    });
+		
+		$(document.getElementById("btn")).on('click', function(){
+		$(document.getElementById("resultsP2")).fadeIn("slow");
+});	
+                $("#div_tooltip[title]").tooltip({
+					tooltipClass: "tooltip-styling"
+				}); 
+});
+	</script>
+
+</body>
+</html>

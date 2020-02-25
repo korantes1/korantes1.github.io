@@ -1,0 +1,171 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+        <meta charset="utf-8">
+        <title>CNIT-133 - Homework 3</title>
+        <meta name="description" content="Homework 3">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="normalize.min.css">
+        <link rel="stylesheet" href="main.css">
+		<link rel="stylesheet" href="hw3.css">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>			
+
+	function process()
+	 {
+		var number1, number2, number3, number4, n1, n2, n3, n4, nums, finalAverage, grades;
+		number1 = document.forms["myform"].elements["num1"].value;
+		number2 = document.forms["myform"].elements["num2"].value;
+		number3 = document.forms["myform"].elements["num3"].value;
+		number4 = document.forms["myform"].elements["num4"].value;
+		n1 = parseInt(number1);
+		n2 = parseInt(number2);
+		n3 = parseInt(number3);
+		n4 = parseInt(number4);
+		finalAverage = (.5 * n1) + (.2 * n2) + (.2 * n3) + (.1 * n4);
+			switch (true)
+					 {
+						 case (finalAverage <= 59):
+							 document.forms["myform"].elements["grade"].value= ("F - Student must retake the course");
+							 break;
+						 case (finalAverage <= 69):
+							 document.forms["myform"].elements["grade"].value= ("D - Student must retake the course");
+							 break;
+						case (finalAverage <= 79):
+							 document.forms["myform"].elements["grade"].value= ("C");
+							 break;
+							 case (finalAverage <= 89):
+							 document.forms["myform"].elements["grade"].value= ("B");
+							 break;
+							 case (finalAverage <= 100):
+							 document.forms["myform"].elements["grade"].value= ("A");
+							 break;
+							 
+							 }
+		 
+		 var validity = document.getElementsByTagName('input');
+		 for (var entry = 0; entry < validity.length; entry++){
+			 if ((validity[entry].value === "" ) || (isNaN(validity[entry].value))){
+				 return  document.getElementById("results").innerHTML= ("<p>Please enter a number!</p>");
+				 
+			 }
+			 else {
+				 return	document.forms["myform"].elements["finalAve"].value= (Math.round(finalAverage));
+				 		document.forms["myform"].elements["grade"].value= (grades);
+				 }
+		 }
+
+	 }
+	function res()
+	{
+		document.innerHTML = "",
+		document.getElementById("temperature").innerHTML= "",
+		document.myform.num1.focus();
+	}
+
+</script>
+</head>
+			<header>
+			<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="hw3.html">Back</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Part 1</li>
+  </ol>
+</nav>
+		</header>
+<body onload="document.forms['myform'].elements['num1'].focus()">
+	<div class="container">
+<ul class="nav nav-tabs" id="myTab" role="tablist" style=" margin: auto; margin-top: 100px;">
+  <li class="nav-item">
+    <a class="nav-link active" id="part1-tab" data-toggle="tab" href="hw3Part1.html" role="tab" aria-controls="Part1" aria-selected="true">Part 1</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="part2-tab" data-toggle="tab" href="hw3Part2.html" role="tab" aria-controls="Part2" aria-selected="false">Part 2</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="part3-tab" data-toggle="tab" href="hw3Part3.html" role="tab" aria-controls="Part3" aria-selected="false">Part 3</a>
+  </li>
+</ul>
+	<h1>Part 1</h1>
+
+<h3>Please enter student grades</h3>
+
+<form name="myform">
+<div class="form-group">
+<label for="num1">Homework Average</label>
+<input id="in1" class="form-control" type="number" min="0" max="100" name="num1">
+</div>
+<div class="form-group">
+<label for="num2">Mid-Term Exam Score</label>
+<input id="in2" class="form-control" type="number" min="0" max="100" name="num2">
+</div>
+<div class="form-group">
+<label for="num3">Final Exam Score</label>
+<input id="in3" class="form-control" type="number" min="0" max="100" name="num3">
+	</div>
+<div class="form-group">
+<label for="num4">Participation</label>
+<input id="in4" class="form-control" type="number" min="0" max="100" name="num4">
+	</div>
+<!-- display results in a div -->
+	<div id="results" class="row">
+	<div>
+		<label for="finalAve">Final Average</label>
+		<input class="form-control" readonly type="text" name="finalAve">
+	</div>
+	<div>
+		<label for="grade">Grade</label>
+		<input class="form-control" readonly type="text" name="grade">
+	</div>
+	<div id="badResult"></div>
+	</div>
+
+<br><br>
+<button class="btn btn-primary" id="btn" type="button" onclick="process(); document.forms['myform'].elements['num1'].focus();" value="SUBMIT" disabled="disabled">SUBMIT</button>
+	<button class="btn btn-primary" id="reset" type="reset" value="RESET" onclick="res()">RESET</button>
+		
+</form>
+
+	
+</div>
+
+<script>
+	$(document).ready(function(){
+		$('input').keyup( function () {
+    //limit the value to between 0 and 100
+    var thisVal = parseInt($(this).val(), 10);
+    if (!isNaN(thisVal)) {
+        thisVal = Math.max(0, Math.min(100, thisVal));
+        $(this).val(thisVal);
+    }
+    
+});
+		    //enable submit button
+       $("#in1, #in2, #in3, #in4").keyup(function() {
+
+        var empty = false;
+        $("#in1, #in2, #in3, #in4").each(function() {
+            if ($(this).val().length == 0) {
+                empty = true;
+            }
+        });
+
+        if (empty) {
+            $('#btn').attr('disabled', 'disabled');
+        } else {
+            $('#btn').attr('disabled', false);
+        }
+    });
+		
+		$(document.getElementById("btn")).on('click', function(){
+		$(document.getElementById("results")).fadeIn("slow");
+});
+	
+		
+});
+	</script>
+
+</body>
+</html>

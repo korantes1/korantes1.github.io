@@ -1,0 +1,129 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+        <meta charset="utf-8">
+        <title>CNIT-133 - Homework 3</title>
+        <meta name="description" content="Homework 3">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="normalize.min.css">
+        <link rel="stylesheet" href="main.css">
+		<link rel="stylesheet" href="hw3.css">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>			
+		
+	function processC()
+	 { 	 
+		 var number1 = document.forms["myform"].elements["num1"].value;
+		var	n1 = parseInt(number1);
+		var	celsius = 5 / 9 * (n1 - 32);
+		 var validity = document.getElementsByTagName('input');
+		 for (var entry = 0; entry < validity.length; entry++){
+			 if ((validity[entry].value === "" ) || (isNaN(validity[entry].value))){
+				 return  document.getElementById("resultsP3").innerHTML= ("<p>Please enter a number!</p>");
+			 }
+			 else {
+				 return	document.forms["myform"].elements["temperature"].value= (Math.round(celsius) + "\u00B0C");
+				 }
+		 }
+
+	 }
+		function processF()
+	 {	 
+		 var number1 = document.forms["myform"].elements["num1"].value;
+	var	n1 = parseInt(number1);
+	var	fahrenheit = (9 / 5 * n1) + 32;
+		 var validity = document.getElementsByTagName('input');
+		 for (var entry = 0; entry < validity.length; entry++){
+			 if ((validity[entry].value === "" ) || (isNaN(validity[entry].value))){
+				 return  document.getElementById("resultsP3").innerHTML= ("<p>Please enter a number!</p>");
+				 
+			 }
+			 else {
+				 	return document.forms["myform"].elements["temperature"].value= (Math.round(fahrenheit) + "\u00B0F");
+				 }
+		 }
+
+	 }
+	function res()
+	{
+		document.innerHTML = "";
+		document.myform.num1.focus();
+	}
+
+</script>
+</head>
+			<header>
+			<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="hw3.html">Back</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Part 3</li>
+  </ol>
+</nav>
+		</header>
+<body onload="document.forms['myform'].elements['num1'].focus()">
+	<div class="container">
+<ul class="nav nav-tabs" id="myTab" role="tablist" style=" margin: auto; margin-top: 100px;">
+  <li class="nav-item">
+    <a class="nav-link" id="part1-tab" data-toggle="tab" href="hw3Part1.html" role="tab" aria-controls="Part1" aria-selected="false">Part 1</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="part2-tab" data-toggle="tab" href="hw3Part2.html" role="tab" aria-controls="Part2" aria-selected="false">Part 2</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link active" id="part3-tab" data-toggle="tab" href="hw3Part3.html" role="tab" aria-controls="Part3" aria-selected="true">Part 3</a>
+  </li>
+</ul>
+	<h1>Part 3</h1>
+
+<h3>Temperature</h3>
+
+<form name="myform">
+<div class="form-group">
+<label for="num1">Enter a number</label>
+<input id="in1" class="form-control" type="number" name="num1">
+</div>
+<!-- display results in a div -->
+	<div id="resultsP3" class="row">
+	<div>
+		<label for="temperature">Temperature</label>
+		<input class="form-control" readonly type="text" name="temperature">
+	</div>
+	<div id="badResult"></div>
+	</div>
+
+<br><br>
+<button class="btn btn-primary" id="btnC" type="button" onclick="processC(); document.forms['myform'].elements['num1'].focus();" value="SUBMIT" disabled="disabled">CELSIUS</button>
+	<button class="btn btn-primary" id="btnF" type="button" onclick="processF(); document.forms['myform'].elements['num1'].focus();" value="SUBMIT" disabled="disabled">FAHRENHEIT</button>
+	<button class="btn btn-primary" id="reset" type="reset" value="RESET" onclick="res()">RESET</button>
+		
+</form>
+
+	
+</div>
+
+<script>
+	$(document).ready(function(){
+
+		    //enable submit button
+       $("#in1").keyup(function() {
+
+        var empty = false;
+        $("#in1").each(function() {
+            if ($(this).val().length == "") {
+                empty = true;
+            }
+        });
+
+        if (empty) {
+            $('#btnC, #btnF').attr('disabled', 'disabled');
+        } else {
+            $('#btnC, #btnF').attr('disabled', false);
+        }
+    });		
+});
+	</script>
+
+</body>
+</html>
