@@ -1,0 +1,63 @@
+@charset "UTF-8";
+/* CSS Document */
+body {
+	font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
+}
+
+a {
+	display: block;
+	text-decoration: none;
+	font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
+	background: rgba(77,177,27,1.00);
+	color: rgba(0,0,0,1.00);
+	padding: 12px;
+	border-radius: 8px;
+	margin: 5px;
+	width: 300px;
+}
+
+a:hover {
+	background: rgba(0,0,0,1.00);
+	color: rgba(255,255,255,1.00);
+}
+
+ul {
+	padding: inherit;
+}
+
+ul li {
+	display: block;	
+	
+}
+
+img {
+	width: 150px;
+}
+
+section ul li {
+	display: inline-block;
+}
+section ul li a {
+	background: rgba(87,219,253,1.00);
+}
+.goodlinks {
+	width: 900px;
+}
+.goodlinks ul li {
+	display: block;
+}
+.goodlinks a {
+	display: inline-block;
+	
+	font-size: 1.4rem;
+	font-weight: 600;
+	text-align: center;
+	vertical-align: middle;
+	padding:50px 10px;
+}
+.goodlinks p {
+	display: inline-block;
+	width: calc(95% - 320px);
+	vertical-align: middle;
+	font-size: 1.2rem;
+}
