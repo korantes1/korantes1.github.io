@@ -1,0 +1,73 @@
+@charset "UTF-8";
+/* CSS Document */
+
+
+#result_a, #result_b {
+	text-align: center;
+	color: red;
+	font-size: 1.5rem;
+	font-weight: 500;
+	padding: 10px;
+	margin-top: -10px;
+	margin-bottom: 20px;
+}
+
+#draggable { 
+	display: inline-block;
+	width: 150px; 
+	height: 150px; 
+	 background: rgba(248,0,4,1.00);
+	color: white;
+	font-size: 1.5rem;
+	font-weight: 700;
+	text-align: center;
+	vertical-align: middle;
+	border-radius: 100%;
+}
+#draggable p{
+	padding-top:20px;
+	margin: auto;
+}
+#draggable img {
+	width: 40px;
+	fill: white;
+}
+
+#draggable:hover {
+	background: #e7a61a;
+	-webkit-box-shadow: 10px 10px 29px 5px rgba(0,0,0,0.24);
+-moz-box-shadow: 10px 10px 29px 5px rgba(0,0,0,0.24);
+box-shadow: 10px 10px 29px 5px rgba(0,0,0,0.24);
+}
+
+table {
+	width: 100%;
+}
+
+thead {
+	background-color: rgba(137,4,6,1.00);
+	color: rgba(255,255,255,1.00);
+}
+thead th {
+	padding: 10px;
+	font-size: 1.2rem;
+}
+
+tbody td {
+	padding-left: 10px;
+	font-size: 1rem;
+}
+
+tbody tr {
+	background-color: rgba(242,251,255,1.00);
+}
+.oddrow {
+	background-color: rgba(153,194,145,1.00);
+	
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}

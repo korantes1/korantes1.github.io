@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>CNIT-133 - Homework 4</title>
+<meta name="description" content="Homework 4">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="normalize.min.css">
+<link rel="stylesheet" href="main.css">
+<link rel="stylesheet" href="hw4.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<link href = "https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" 
+         rel = "stylesheet">
+<script src = "https://code.jquery.com/jquery-1.10.2.js"></script> 
+<script src = "https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script> 
+<script>			
+function part1a()
+	 {
+		var sum = 0;
+		var product = 1;
+
+for(var i = 5; i <= 21; i+=4){
+
+    sum += i;
+}
+for(var i = 5; i <= 21; i+=4){
+
+    product *= i;
+	var fn = product.toLocaleString();
+}
+
+document.getElementById("result_a").innerHTML= (fn + " is the product of every 4th integer from 5 to 21<br>" + sum + " is the sum of every 4th integer from 5 to 21");		 
+
+	 }
+function part1b()
+	 {
+		var sum = 0;
+		var product = 1;
+		 var i = 3;
+		 
+do {  product *= i;
+	sum += i;
+	i+=3;
+	var fn = product.toLocaleString();
+}
+		 while (i <= 21);
+
+		 
+
+
+document.getElementById("result_b").innerHTML= (fn + " is the product of every 3rd integer from 3 to 21<br>" + sum + " is the sum of every 3rd integer from 3 to 21");		 
+
+	 }
+
+</script>
+</head>
+<body>
+<header>
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="hw4.html">Back</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Part 1</li>
+    </ol>
+  </nav>
+</header>
+<div class="container">
+  <ul class="nav nav-tabs" id="myTab" role="tablist" style=" margin: auto; margin-top: 100px;">
+    <li class="nav-item"> <a class="nav-link active" id="part1-tab" data-toggle="tab" href="hw4Part1.html" role="tab" aria-controls="Part1" aria-selected="true">Part 1</a> </li>
+    <li class="nav-item"> <a class="nav-link" id="part2-tab" data-toggle="tab" href="hw4Part2.html" role="tab" aria-controls="Part2" aria-selected="false">Part 2</a> </li>
+    <li class="nav-item"> <a class="nav-link" id="part3-tab" data-toggle="tab" href="hw4Extra.html" role="tab" aria-controls="Part3" aria-selected="false">Extra</a> </li>
+  </ul>
+  <h1>Part 1</h1>
+  <h6>Part a. Calculate the product and sum of each forth integer from 5 to 21 using the FOR Statement.</h6>
+  <button class="btn btn-primary" type="button" onclick="part1a();" value="SUBMIT">Calculate</button>
+  <div id="result_a"></div>
+  <h6>Part b. Calculate the product and sum of each third integer from 3 to 21 using the DO WHILE Statement.</h6>
+  <button class="btn btn-primary" type="button" onclick="part1b();" value="SUBMIT">Calculate</button>
+  <div id="result_b"></div>
+</div>
+<div id="draggable" class="ui-widget-content">
+  <p>Drag me around</p>
+  <img  src="drag.svg" alt="drag around"/> </div>
+<script>
+	  
+  $(document).ready(function(){
+    $( "#draggable" ).draggable();
+  } );
+  </script> 
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script> 
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+</body>
+</html>
