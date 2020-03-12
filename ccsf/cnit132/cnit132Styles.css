@@ -61,3 +61,19 @@ section ul li a {
 	vertical-align: middle;
 	font-size: 1.2rem;
 }
+
+.bg1 {
+	background: url("student.jpg") left top no-repeat, url("elementarystudent.png") right bottom no-repeat;
+	background-color: rgba(245,214,255,1.00);
+	
+}
+
+.bg1 section {
+	width: 60%;
+	margin: auto;
+}
+
+.bg1 figure {
+	text-align: center;
+	margin: auto;
+}
