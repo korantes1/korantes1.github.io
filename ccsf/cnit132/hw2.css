@@ -17,6 +17,7 @@ h1, h3, span, a:focus {
 
 h1 {
 	text-align: center;
+	padding-bottom: 20px;
 	margin: 0;
 }
 h2 {
@@ -48,4 +49,27 @@ table td {
 table td:nth-child(1) {
 	text-align: center;
 	font-weight: 700;
+}
+
+#banner{
+	position: absolute;
+	top: 50px;
+-webkit-animation:linear infinite ;
+-webkit-animation-name: run;
+-webkit-animation-timing-function: ease;
+-webkit-animation-duration: 5s;
+}     
+@-webkit-keyframes run {
+    0% { left: 0;}
+    10%{ left : calc(100% - 280px);}
+    100%{ left: 0;}
+}
+#banner h2 {
+	text-align: center;
+	padding: 5px;
+	background: rgba(0,0,0,1.00);
+	color: white;
+	font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
+	font-size: 1rem;
+	width: 280px;
 }
